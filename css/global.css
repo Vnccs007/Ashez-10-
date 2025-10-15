@@ -128,3 +128,20 @@ body{
 .show {
   display: block;
 }
+
+@media(max-width: 600px){
+  /* navbar mobile */
+  .simbolo-ashez{
+    width: 10vw;
+  }
+  .button-pesquisa{
+    display: none;
+  }
+  .barra-pesquisa{
+    width: 55vw;
+    margin-right: 3px;
+  }
+  .lupa{
+    display: none;
+  }
+}
