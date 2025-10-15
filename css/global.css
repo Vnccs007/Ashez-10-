@@ -131,6 +131,11 @@ body{
 
 @media(max-width: 600px){
   /* navbar mobile */
+  .Navbar{
+    display: flex;           /* coloca os itens lado a lado */
+    align-items: center;     /* alinha verticalmente no centro */
+    justify-content: space-between; 
+  }
   .simbolo-ashez{
     width: 10vw;
   }
@@ -138,8 +143,9 @@ body{
     display: none;
   }
   .barra-pesquisa{
-    width: 55vw;
-    margin-right: 3px;
+    flex: 1;
+    margin: 0 8px;
+    max-width: 100%
   }
   .lupa{
     display: none;
