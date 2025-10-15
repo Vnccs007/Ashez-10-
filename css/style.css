@@ -54,7 +54,6 @@
 /* cards de após o carousel */
 .cards{
   display: flex;
- 
 }
 
 .boxPrice{
@@ -261,14 +260,11 @@
     padding: 8px;
   }
   #cardJogo{
-    flex: 0 0 300px;        /* não encolhe/não cresce, largura 300px */
+    flex: 0 0 500px;        /* não encolhe/não cresce, largura 300px */
     box-sizing: border-box;
     min-height: 180px;
     border-radius: 8px;
-    background-position: -60px;
     width: 50vw;
   }
-  .cardDestaque1{
-    background-position: -20px;
-  }
+  
 }
