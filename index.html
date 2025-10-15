@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Início - Ashez</title>
+        <link rel="icon" href="imgGeral/ashezSemFundo.png"/>
+        <link rel="stylesheet" href="css/global.css"/>
+        <link rel="stylesheet" href="css/style.css"/>
+    </head>
+    <body>
+        <nav class="Navbar">
+            <div class="container">
+                <a href="index.html"><img src="/imgGeral/logoAshez.png" alt="Ícone da Ashez" class="simbolo-ashez"></a>
+                <img src="imgGeral/lupa_pesquisa.png" alt="Símbolo da Barra de Pesquisa" class="">
+                <form class="barra-pesquisa" role="search">
+                    <input class="barra-de-pesquisa" type="search" placeholder="Buscar por Jogos" aria-label="Search"/>
+                    <button class="button-pesquisa" type="submit">Buscar</button>
+                </form>
+                <div class="user-menu">
+                    <button class="usuario-btn" onclick="toggleMenu()"></button>
+                    <div id="usuarioDropdown" class="dropdown">
+                            <div class="username">
+                                <button class="usuario-btn"></button> 
+                                <label class="names"> variavel Nome do user</label>
+                            </div>
+                        <a href="pages/config.html">Configurações</a>
+                        <a href="#">Amigos</a>
+                        <a href="#">Meus Jogos</a>
+                        <a href="#">Lista de Desejos</a>
+                        <a href="#">Suporte</a>
+                    </div>
+                </div>
+            </div>
+        </nav><br/><br/><br/><br/>
+        <div class="carousel-container">
+            <div class="carousel-track" id="carousel-track">
+            </div>
+        </div>
+         
+        <!-- DESTAQUES -->
+        <div class="fundoCards">
+            <p class="titleSection"> Destaques </p> <br/>
+            <div class="cards"> 
+                <div class="cardDestaque1" id="cardJogo"> <label class="boxPrice"> R$279,99 </label> </div> 
+                <div class="cardDestaque2" id="cardJogo"> <label class="boxPrice"> R$299,00 </label></div>
+                <div class="cardDestaque3" id="cardJogo"> <label class="boxPricePromotion"> Grátis </label></div>
+            </div> 
+            <a class="verMais" href="pages/destaques.html"> Ver mais</a> <br/>
+
+            <!-- PROMOCAO LIMITADA -->
+            <p class="titleSection"> <b> Promoção Limitada </b> </p> <br/>
+            <div class="cards"> 
+                <div class="cardPromotion1" id="cardJogo"> <label class="boxPricePromotion"> R$50,90 </label> </div>
+                <div class="cardPromotion2" id="cardJogo"> <label class="boxPricePromotion"> R$29,90 </label> </div>
+                <div class="cardPromotion3" id="cardJogo"> <label class="boxPricePromotion"> R$74,90 </label></div>
+            </div>
+            <a class="verMais" href="pages/destaques.html"> Ver mais</a> <br/>
+
+            <!-- MAIS VENDIDOS -->
+            <p class="titleSection"> <b> Mais Vendidos </b> </p> <br/>
+            <div class="cards"> 
+                <div class="cardMaisVendidos1" id="cardJogo"> <label class="boxPricePromotion"> R$74,90 </label> </div>
+                <div class="cardMaisVendidos2" id="cardJogo"> <label class="boxPrice"> R$84,90 </label> </div>
+                <div class="cardMaisVendidos3" id="cardJogo"> <label class="boxPricePromotion"> R$39,50 </label></div>
+            </div>
+            <a class="verMais" href="pages/destaques.html"> Ver mais</a> <br/>
+
+        </div>
+        <script src="js/script.js"></script>
+        <script src="js/main.js"></script>
+    </body>
+</html>

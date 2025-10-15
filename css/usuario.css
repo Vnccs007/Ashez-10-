@@ -1,0 +1,193 @@
+
+*{
+  font-family:Helvetica, sans-serif;
+}
+body{
+    
+    background: fixed;
+    background-image:linear-gradient(to bottom,black,#404040);
+ }
+
+.Navbar {
+  display: flex;           /* coloca os itens lado a lado */
+  align-items: center;     /* alinha verticalmente no centro */
+  justify-content: flex-start; 
+  padding: 10px;
+}
+
+.container{
+  display: flex;              
+}
+
+.simbolo-ashez {
+  width: 50px; 
+  height: auto;
+  margin-right: 20px; 
+  cursor: pointer;
+}
+
+.barra-pesquisa{
+  display: flex;  
+  width: 85vw;
+  height: 40px;
+  
+}
+
+.barra-pesquisa input {
+  border-radius: 30px;
+  flex: 1;
+  color: white;
+  background: black;
+  border: none;
+  padding-left: 18px;
+}
+
+.barra-pesquisa button {
+  padding: 5px 5px;
+  width: 100px;
+  background-color: darkred;
+  color: white;
+  font-size: 12px;             
+  font-weight: bold;                       
+  border: none;                
+  border-radius: 15px;         
+  cursor: pointer;             
+  transition: 0.3s ease; 
+}
+.barra-pesquisa button:hover {
+  background-color: darkred;   
+  transform: scale(1.05);     
+}
+
+.usuario-btn {
+  border-radius: 60%;
+  width: 40px;
+  height: 40px;
+  border: none;
+  cursor: pointer;
+  background-image: url(/imgGeral/userFoto.png);
+  background-size: cover;
+
+}
+.username{
+  display: flex;
+  color: white;
+}
+.names{
+  margin-top: 5px;
+  margin-left: 10px;
+}
+/* Dropdown */
+.dropdown {
+  display: none;
+  position: absolute;
+  right: 0;
+  margin-top: 10px;
+  background-color: black;
+  border-radius: 8px;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+  overflow: hidden;
+  padding: 15px;
+  z-index: 1;
+}
+
+.dropdown a {
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+  color: white;
+  background-color: #800000;
+  margin: 5px;
+  border-radius: 5px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.dropdown a:hover {
+  background-color: #b30000;
+}
+
+.show {
+  display: block;
+}
+
+.perfil {
+  width: 80%;
+  max-width: 1000px;
+  margin: 40px auto;
+  background: #030302;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+.perfil-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.foto-user {
+  width: 100px;
+  border-radius: 50%;
+  margin-right: 20px;
+}
+
+.dados-user h2 {
+  background: #171717;
+  color: white;
+  padding: 15px;
+  border-radius: 12px;
+  width: 250px;
+}
+
+.status {
+  display: inline-block;
+  background: #171717;
+  margin-top: 10px;
+  padding: 10px 20px;
+  border-radius: 12px;
+}
+
+.fundo-jogos {
+  background: #0a0a0a;               
+  border-radius: 15px;
+  padding: 30px;
+  width: 80%;
+  max-width: 1000px;
+  margin: 20px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;                        
+}
+
+.linha-jogo {
+  display: flex;
+  justify-content: space-between;     
+  align-items: center;
+  gap: 20px;
+}
+
+.jogo {
+  background-color: #800000;         
+  color: white;
+  flex: 1;
+  height: 100px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.conquistas {
+  background-color: #171717;         
+  color: white;
+  flex: 1;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+}

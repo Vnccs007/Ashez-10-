@@ -1,0 +1,116 @@
+
+.fundoCards{
+  background-color: #363434;
+  border-radius: 20px;
+  padding: 20px 30px;
+}
+.titleSection{
+  font-size: 130%;
+  color: white;
+}
+
+/* cards de após o carousel */
+.cards{
+  display: flex;
+  
+}
+.boxPrice{
+  background-color: #363434;
+  padding: 14px;
+  text-align: right;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.boxPricePromotion{
+  background-color: #5bc251;;
+  padding: 14px;
+  text-align: right;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+#cardDestaque{
+  justify-content: flex-start;
+  color: white;
+  padding: 5px 10px;
+  width: 31vw;
+  height: 33vh;
+  color: white;
+  font-size: 15px;
+  color: white;
+  font-size: 15px;
+  border-radius: 10px; 
+  margin-right: 20px;
+  box-shadow: 1px 2vh 25px black;
+  cursor: pointer;
+  background-size: cover;
+}
+/* CARDS DESTAQUE PRINCIPAL */
+.card1{
+  background-image: url(/imgJogos/mk11.jpg);
+}
+.card2{
+  background-image: url(/imgJogos/fc26.jpg);
+}
+.card3{
+  background-image: url(/imgJogos/cs2.jpg);
+}
+.card4{
+  background-image: url(/imgJogos/battlefieldVI.jpg);
+}
+.card5{
+  background-image: url(/imgJogos/TheLastOfUs_ll.jpg);
+}
+.card6{
+  background-image: url(/imgJogos/gtaV.jpeg);
+}
+.card7{
+  background-image: url(/imgJogos/f1.jpg);
+}
+.card8{
+  background-image: url(/imgJogos/marvelRivals.jpg);
+}
+.card9{
+  background-image: url(/imgJogos/readyOrNot.jpg);
+}
+
+/* CARDS DESTAQUES DA SEMANA */
+.cardDestaqueSemana1{
+  background-image: url(../imgJogos/peak.jpg);
+}
+.cardDestaqueSemana2{
+  background-image: url(../imgJogos/batmanArkhanKnight.png);
+}
+.cardDestaqueSemana3{
+  background-image: url(../imgJogos/rocketLeague.jpg);
+}
+.cardDestaqueSemana4{
+  background-image: url(../imgJogos/cs2.jpg);
+}
+.cardDestaqueSemana5{
+  background-image: url(../imgJogos/sifu.jpg);
+}
+.cardDestaqueSemana6{
+  background-image: url(../imgJogos/readDead_ll.jpg);
+}
+.cardDestaqueSemana7{
+  margin-top: 3vw;
+  background-image: url(../imgJogos/godOfWar.jpeg);
+}
+.cardDestaqueSemana8{
+   margin-top: 3vw;
+  background-image: url(../imgJogos/gtaV.jpeg);
+}
+.cardDestaqueSemana9{
+   margin-top: 3vw;
+  background-image: url(../imgJogos/forzaHorizonIV.jpg);
+}
+
+.verMais{
+  display: block;
+  color: white;
+  text-align: right;
+  margin-top: 2vh;
+  margin-right: 2vw;
+  cursor: pointer;
+  text-decoration: underline;
+}

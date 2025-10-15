@@ -1,0 +1,15 @@
+Kevin,27/09/25 15h
+Fiz a tela inicial do site, (incluindo carousel,barra de pesquisa, botao dropdown e etc) com html,
+css e js
+
+vini 30/09
+arrumei css da tela Login e Cadastro, linkei as duas telas, integrei o código do Rafael (config) ao
+código original do projeto.
+
+vini 09/10
+arrumei o espaçamneto do botão buscar, foi colocado imgs no carousel e aba de mais vendidos
+
+Vini 11/10
+arrumei muito do css (box-shadow, margin, bacgorund); fiz a tela destaque com todos os cards; alterei a navbar 
+para ser nav inteligente, coloquei preço nos cards, sendo a classe: card1... Para preços sem promoção;
+e cardPromotion para jogos em promoção 

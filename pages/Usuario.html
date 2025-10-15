@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu perfil</title>
+    <link rel="icon" href="../imgGeral/ashezSemFundo.png"/>
+    <link rel="stylesheet" href="../css/usuario.css"/>
+    <script src="../js/usuario.js"></script>
+</head>
+<body>
+    <div class="container">
+        <nav class="Navbar">
+            <a href="../index.html"> <img src="/imgGeral/logoAshez.png"  alt="Ícone da Ashez" class="simbolo-ashez"></a>
+            <img src="/imgGeral/lupa_pesquisa.png" alt="Símbolo da Barra de Pesquisa" class="">
+            <form class="barra-pesquisa" role="search">
+                <input class="barra-de-pesquisa" type="search" placeholder="Buscar por Jogos" aria-label="Search"/>                   
+                <button class="button-pesquisa" type="submit">Buscar</button>
+                </form>
+            <div class="user-menu">
+                <button class="usuario-btn" onclick="toggleMenu()"></button>
+                <div id="usuarioDropdown" class="dropdown">
+                    <div class="username">
+                            <button class="usuario-btn"></button> 
+                            <label class="names"> variavel Nome do user</label>
+                    </div>
+                        <a href="config.html">Configurações</a>
+                        <a href="#">Amigos</a>
+                        <a href="#">Meus Jogos</a>
+                        <a href="#">Lista de Desejos</a>
+                        <a href="#">Suporte</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+            <section class="perfil">
+                <div class="perfil-header">
+                    <img src="/imgGeral/userFoto.png" alt="Foto do usuário" class="foto-user">
+                    <div class="dados-user">
+                        <h2>USER NAME</h2>
+                        <span class="status">Status</span>
+                    </div>
+                </div>
+
+                    <div class="fundo-jogos">
+                        <div class="linha-jogo">
+                            <div class="jogo">Jogo 1</div>
+                            <div class="conquistas">Conquistas jogo1</div>
+                        </div>
+
+                        <div class="linha-jogo">
+                            <div class="jogo">Jogo 2</div>
+                            <div class="conquistas">Conquistas jogo2</div>
+                        </div>
+                    </div>
+            </section>
+        </div>
+    </body>
+</html>

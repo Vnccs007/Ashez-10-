@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Fazer Login na Ashez </title>
+        <link rel="icon" href="../imgGeral/ashezSemFundo.png"/>
+        <link rel="stylesheet" href="../css/login.css"/>
+    </head>
+    <body>
+        <div class="containerTelaPrincipal">
+            <div class="telaCadastro"> <br/> 
+            <!-- colocar container -->
+                <div class="containerLogoNome">
+                    <img class="logo" src="../imgGeral/logoAshez.png">
+                    <div class="marca"> Ashez </div>
+                </div>
+                <div class="telaBotao">
+                    <label class="tituloLogin">Login</label><br/><br/>
+                    <form class="formulario" action="/cadastro" method="POST">
+                
+                        <label>Email:</label> <br/><br/>
+                        <input class="emailbar" type="email" name="email" required> <br/><br/>
+
+                        <label>Senha:</label> <br/><br/>
+                        <input class="senhabar" type="password" name="senha" required> <br/><br/>
+
+                    </form>
+                    <div class="linkCadastro"> 
+                        <p class="naoTemConta">Não tem uma conta? </p> <a href="cadastro.html" class="criarConta"> Criar conta</a>
+                    </div>
+                </div> <br/>
+            <!-- botão entrar -->
+            <div class="containerCadastro">
+                 <a href="../index.html"> <button type="submit" name="entrar" class="entrar">  Entrar  </button> <a/>
+            </div>
+         </div>
+        </div>
+    </body>
+</html>

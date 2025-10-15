@@ -1,0 +1,249 @@
+.carousel-container {
+      position: relative;
+      overflow: hidden;
+      align-items: center;
+      justify-content: center;
+}
+
+.carousel-track {
+      display: flex;
+      gap: 20px;
+      transition: transform 0.90s ease;
+      padding: 40px 0;
+      cursor: pointer;
+}
+
+    
+.carousel-slide {
+      flex: 0 0 60%;
+      background-color: darkred;
+      height: 60vh; 
+      border-radius: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 2rem;
+      transition: transform 0.3s ease, opacity 0.3s ease;
+      box-shadow: 2vw 4vh 30px rgb(22, 22, 22);
+}
+    
+.carousel-slide.shrink {
+      flex: 0 0 20%;
+      opacity: 0.6;
+      transform: scale(0.85);
+}
+    @media (max-width: 768px) {
+      .carousel-slide {
+        flex: 0 0 80%;
+      }
+      .carousel-slide.shrink {
+        flex: 0 0 10%;
+      }
+    }
+.fundoCards{
+  background-color: #363434;
+  border-radius: 20px;
+  padding: 20px 30px;
+}
+.titleSection{
+  font-size: 130%;
+  color: white;
+}
+
+/* cards de após o carousel */
+.cards{
+  display: flex;
+ 
+}
+
+.boxPrice{
+  background-color: #363434;
+  padding: 14px;
+  text-align: right;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.boxPricePromotion{
+  background-color: #5bc251;;
+  padding: 14px;
+  text-align: right;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+/* CARDS DESTAQUES */
+#cardJogo{
+  transition: 0.5 ease;
+}
+#cardJogo:hover{
+  transform: scale(1.006)
+}
+.cardDestaque1{
+  justify-content: flex-start;
+  color: white;
+  padding: 5px 10px;
+  width: 31vw;
+  height: 33vh;
+  background: rgb(0, 0, 0);
+  color: white;
+  font-size: 15px;
+  border-radius: 10px; 
+  margin-right: 20px;
+  background-image: url(/imgJogos/mk11.jpg);
+  background-size: cover;
+  box-shadow: 1px 2vh 25px black;
+  cursor: pointer;
+  
+}
+
+.cardDestaque2{
+  justify-content: flex-start;
+  color: white;
+  padding: 5px 10px;
+  width: 31vw;
+  height: 33vh;
+  background: rgb(0, 0, 0);
+  color: white;
+  font-size: 15px;
+  border-radius: 10px; 
+  margin-right: 20px;
+  background-image: url(/imgJogos/fc26.jpg);
+  background-size: cover;
+  cursor: pointer;
+  box-shadow: 1px 2vh 25px black;
+}
+
+.cardDestaque3{
+  justify-content: flex-start;
+  color: white;
+  padding: 5px 10px;
+  width: 31vw;
+  height: 33vh;
+  background: rgb(0, 0, 0);
+  color: white;
+  font-size: 15px;
+  border-radius: 10px; 
+  margin-right: 20px;
+  background-image: url(/imgJogos/cs2.jpg);
+  background-size: cover;
+  cursor: pointer;
+  box-shadow: 1px 2vh 25px black;
+}
+
+.verMais{
+  display: block;
+  color: white;
+  text-align: right;
+  margin-top: 2vh;
+  margin-right: 2vw;
+  cursor: pointer;
+  text-decoration: underline;
+  
+}
+
+/* CARDS EM PROMOÇÃO  */
+
+.cardPromotion1{
+  justify-content: flex-start;
+  color: white;
+  padding: 5px 10px;
+  width: 31vw;
+  height: 33vh;
+  background: rgb(0, 0, 0);
+  color: white;
+  font-size: 15px;
+  border-radius: 10px; 
+  margin-right: 20px;
+  background-image: url(/imgJogos/civilizationVI.jpg);
+  background-size: cover;
+  box-shadow: 1px 2vh 25px black;
+  cursor: pointer;
+}
+
+.cardPromotion2{
+  justify-content: flex-start;
+  color: white;
+  padding: 5px 10px;
+  width: 31vw;
+  height: 33vh;
+  background: rgb(0, 0, 0);
+  color: white;
+  font-size: 15px;
+  border-radius: 10px; 
+  margin-right: 20px;
+  background-image: url(/imgJogos/itTakesTwo.jpg);
+  background-size: cover;
+  box-shadow: 1px 2vh 25px black;
+  cursor: pointer;
+}
+
+.cardPromotion3{
+  justify-content: flex-start;
+  color: white;
+  padding: 5px 10px;
+  width: 31vw;
+  height: 33vh;
+  background: rgb(0, 0, 0);
+  color: white;
+  font-size: 15px;
+  border-radius: 10px; 
+  margin-right: 20px;
+  background-image: url(/imgJogos/readDead_ll.jpg);
+  background-size: cover;
+  box-shadow: 1px 2vh 25px black;
+  cursor: pointer;
+}
+
+
+/* CARDS MAIS VENDIDOS */
+
+.cardMaisVendidos1{
+  justify-content: flex-start;
+  color: white;
+  padding: 5px 10px;
+  width: 31vw;
+  height: 33vh;
+  background: rgb(0, 0, 0);
+  color: white;
+  font-size: 15px;
+  border-radius: 10px; 
+  margin-right: 20px;
+  background-image: url(/imgJogos/gtaV.jpeg);
+  background-size: cover;
+  box-shadow: 1px 2vh 25px black;
+  cursor: pointer;
+}
+
+.cardMaisVendidos2{
+  justify-content: flex-start;
+  color: white;
+  padding: 5px 10px;
+  width: 31vw;
+  height: 33vh;
+  background: rgb(0, 0, 0);
+  color: white;
+  font-size: 15px;
+  border-radius: 10px; 
+  margin-right: 20px;
+  background-image: url(../imgJogos/batmanArkhanKnight.png);
+  background-size: cover;
+  box-shadow: 1px 2vh 25px black;
+  cursor: pointer;
+}
+
+.cardMaisVendidos3{
+  justify-content: flex-start;
+  color: white;
+  padding: 5px 10px;
+  width: 31vw;
+  height: 33vh;
+  background: rgb(0, 0, 0);
+  color: white;
+  font-size: 15px;
+  border-radius: 10px; 
+  margin-right: 20px;
+  background-image: url(/imgJogos/detroidBecome.jpg);
+  background-size: cover;
+  box-shadow: 1px 2vh 25px black;
+  cursor: pointer;
+}

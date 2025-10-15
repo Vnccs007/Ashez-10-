@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Fazer cadastro na Ashez </title>
+        <link rel="stylesheet" href="../css/cadastro.css"/>
+        <link rel="icon" href="../imgGeral/ashezSemFundo.png"/>
+    </head>
+    <body>
+        <div class="containerTelaPrincipal">
+                <div class="telaCadastro"> <br/> 
+                <!-- colocar container -->
+                    <div class="containerLogoNome">
+                        <img class="logo" src="../imgGeral/logoAshez.png">
+                        <div class="marca"> Ashez </div>
+                    </div>
+                    <div class="telaBotao"> <br/><br/>
+                        <form class="formulario" action="/cadastro" method="POST">
+                            
+                            <label>Nome:</label><br/><br/>
+                            <input class="namebar" type="text" name="nome" required> <br/><br/>
+
+                            <label>Email:</label> <br/><br/>
+                            <input class="emailbar" type="email" name="email" required onclick=""> <br/><br/>
+
+                            <label>Data de nascimento:</label> <br/><br/>
+                            <input class="nascbar" type="text" name="nascimento" required> <br/><br/>
+
+                            <label>Senha:</label> <br/><br/>
+                            <input class="senhabar" type="password" name="senha" required> <br/><br/>
+
+                            <label>Confirmar Senha:</label> <br/><br/>
+                            <input class="confSenhabar" type="password" name="confirmacaoSenha" required >  <br/>
+                        </form>
+                        <div class="linkConta">
+                            <p class="jaTemConta">Já tem uma conta?</p> <a href="login.html" class="facaLogin">Faça Login</a>
+                        </div>
+                    </div> <br/>
+                <!-- botão entrar -->
+                <div class="containerCadastro">
+                    <button type="submit" name="cadastrar" class="cadastrar">  Cadastrar  </button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Configurações</title>
+        <link rel="icon" href="../imgGeral/ashezSemFundo.png"/>
+        <link rel="stylesheet" href="../css/global.css">
+        <link rel="stylesheet" href="../css/config.css">
+        <script src="../js/main.js"></script>
+    </head>
+    <body>
+        <header class="config-header">
+            <a href="/index.html">
+            <img class="simbolo-ashez" src="/imgGeral/logoAshez.png" alt="Home">
+            </a>
+            <div class="user-menu">
+            <button class="usuario-btn" onclick="toggleMenu()"></button>
+            <div id="usuarioDropdown" class="dropdown">
+                <div class="username">
+                <button class="usuario-btn"></button> 
+                <label class="names">var Nome do Usuário</label>
+                </div>
+                <a href="#">Amigos</a>
+                <a href="#">Meus Jogos</a>
+                <a href="#">Lista de Desejos</a>
+                <a href="#">Suporte</a>
+            </div>
+            </div>
+        </header>
+
+        <main class="config-container">
+            <h1>CONFIGURAÇÕES</h1>
+
+            <div class="search-box">
+                <img class="imgEngrenagem" src="/imgGeral/configuracao-removebg-preview.png" alt="Ícone de Engrenagem de Configurações">
+                <div class="divider"></div>
+                <img class="lupa" src="/imgGeral/lupa-removebg-preview.png" alt="Ícone de Lupa de Pesquisa">
+                <input type="text" placeholder="Buscar configuração">
+            </div>
+
+            <div class="buttons-box">
+                <div class="buttons">
+                    <button>Notificações</button>
+                    <button>Redefinir Senha</button>
+                    <button>Privacidade</button>
+                    <button>Desconectar</button>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

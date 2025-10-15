@@ -1,0 +1,142 @@
+
+body{
+    height: 100%;
+    width: 100%;
+    background:linear-gradient(to bottom, black 20%,#404040); 
+    background-size: 170% 170%; 
+    animation: changeGradient 6.2s ease infinite; 
+    background-attachment: fixed; /* deixa fixo na tela */
+ }
+ .containerTelaPrincipal{
+
+  position: relative;
+  height: 101vh;
+ }
+
+ .telaCadastro{
+    position: absolute;
+    top: 62%;
+    left: 50%;
+    transform: translate(-50%,-60%);
+    background-color: black;
+    width: 615px;
+    height: 580px;
+    border-radius: 25px;
+ }
+ .logo{
+    margin-left: 60px;
+ }
+ .containerLogoNome{
+  display: flex;
+  flex-direction: row;
+
+ }
+ .marca{
+   color: #b9b9c3;
+   font-size: 59px;
+   font-family: Helvetica, sans-serif;
+ }
+ .telaBotao{
+    background-color: #191818;
+    width: 310px;
+    height: 380px;
+    margin-left: 150px;
+    border-radius: 10px;
+ }
+
+ .formulario{
+   color: white;
+   margin-left: 20px;
+   font-family: Helvetica, sans-serif;
+   font-size: 73%;
+ }
+ 
+/* barra do nome */
+ .namebar{
+   padding-right: 50px;
+ }
+ /* .namebar:hover{
+  scale: 106%;
+ } */
+
+/* barra do email */
+ .emailbar{
+   padding-right: 50px;
+ }
+/* .emailbar:hover{
+  scale: 106%;
+} */
+.nascbar{
+  padding-right: 50px;
+}
+/* barra da senha */
+ .senhabar{
+   padding-right: 50px;
+ }
+ /* .senhabar:hover{
+  scale: 106%;
+ } */
+
+/* barra da confirmação da senha */
+ .confSenhabar{
+   padding-right: 50px;
+ }
+ /* .confSenhabar:hover{
+  scale: 106%;
+ } */
+
+
+ .containerCadastro{
+   text-align: center;
+ }
+
+ .linkConta{
+    display: flex;
+ }
+.facaLogin{
+  color: white;
+  align-items: center;
+  font-family: Helvetica, sans-serif;
+  font-size: 11px;
+  margin-top: 10px;
+  margin-left: 8px;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.jaTemConta{
+  color: white;
+  align-items: center;
+  font-family: Helvetica, sans-serif;
+  font-size: 11px;
+  margin-left: 20px;
+}
+  .cadastrar{
+   cursor: pointer;
+   background-color: #990101;
+   color: white;
+   padding: 7px;
+   border-radius: 30px;
+   border: none;
+   margin-top: 20px;
+   padding-left: 25px;
+   padding-right: 25px;
+   transition: 0.5s ease;
+ } 
+ .cadastrar:hover{
+  background-color: white;
+  color: black;
+  transform: scale(1.05);
+ }
+
+@keyframes changeGradient {
+  0% { 
+    background-position: 50% 0%; 
+ }
+  50% { 
+    background-position: 50% 70%;
+  }
+  100% {
+    background-position: 50% 0%;
+  }
+}
+  
