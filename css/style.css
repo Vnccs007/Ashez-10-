@@ -265,5 +265,6 @@
     box-sizing: border-box;
     min-height: 180px;
     border-radius: 8px;
+    background-position: -60px;
   }
 }
