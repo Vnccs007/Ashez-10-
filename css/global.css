@@ -129,11 +129,13 @@ body{
   display: block;
 }
 
-@media(max-width: 600px){
+/*AJUSTANDO TUDO PARA MOBILE*/
+
+@media(max-width: 780px){
   /* navbar mobile */
   .Navbar{
-    display: flex;           /* coloca os itens lado a lado */
-    align-items: center;     /* alinha verticalmente no centro */
+    display: flex;           
+    align-items: center;  
     justify-content: space-between; 
   }
   .simbolo-ashez{
@@ -145,9 +147,7 @@ body{
   .barra-pesquisa{
     flex: 1;
     margin: 0 8px;
-    max-width: 100%
+    max-width: 35%
   }
-  .lupa{
-    display: none;
-  }
+
 }

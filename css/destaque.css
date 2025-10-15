@@ -114,3 +114,23 @@
   cursor: pointer;
   text-decoration: underline;
 }
+@media(max-width: 780px){
+  /* navbar mobile */
+  .Navbar{
+    display: flex;           
+    align-items: center;  
+    justify-content: space-between; 
+  }
+  .simbolo-ashez{
+    width: 10vw;
+  }
+  .button-pesquisa{
+    display: none;
+  }
+  .barra-pesquisa{
+    flex: 1;
+    margin: 0 8px;
+    max-width: 35%
+  }
+
+}

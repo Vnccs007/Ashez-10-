@@ -38,7 +38,7 @@
         flex: 0 0 80%;
       }
       .carousel-slide.shrink {
-        flex: 0 0 10%;
+        flex: 0 0 20%;
       }
     }
 .fundoCards{
@@ -246,4 +246,40 @@
   background-size: cover;
   box-shadow: 1px 2vh 25px black;
   cursor: pointer;
+}
+
+@media(max-width: 768px){
+  .titleSection{
+    font-size: 100%;
+  }
+  .cardDestaque1{
+    width: 100vw;
+    background-position: -40px ;
+  }
+  .cardDestaque2{
+    display: none;
+  }
+  .cardDestaque3{
+    display: none;
+  }
+  /* CARD PROMOTION */
+  .cardPromotion1{
+    width: 100vw;
+  }
+  .cardPromotion2{
+    display: none;
+  }
+  .cardPromotion3{
+    display: none;
+  }
+  /* CARD MAIS VENDIDOS */
+  .cardMaisVendidos1{
+    width: 100vw;
+  }
+  .cardMaisVendidos2{
+    display: none;
+  }
+  .cardMaisVendidos3{
+    display: none;
+  }
 }
