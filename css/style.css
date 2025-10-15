@@ -73,6 +73,8 @@
 /* CARDS DESTAQUES */
 #cardJogo{
   transition: 0.5 ease;
+  margin-right: 20px;
+  padding: 5px 10px;
 }
 #cardJogo:hover{
   transform: scale(1.006)
@@ -80,14 +82,14 @@
 .cardDestaque1{
   justify-content: flex-start;
   color: white;
-  padding: 5px 10px;
+ 
   width: 31vw;
   height: 33vh;
   background: rgb(0, 0, 0);
   color: white;
   font-size: 15px;
   border-radius: 10px; 
-  margin-right: 20px;
+
   background-image: url(/imgJogos/mk11.jpg);
   background-size: cover;
   box-shadow: 1px 2vh 25px black;
@@ -98,14 +100,14 @@
 .cardDestaque2{
   justify-content: flex-start;
   color: white;
-  padding: 5px 10px;
+  
   width: 31vw;
   height: 33vh;
   background: rgb(0, 0, 0);
   color: white;
   font-size: 15px;
   border-radius: 10px; 
-  margin-right: 20px;
+
   background-image: url(/imgJogos/fc26.jpg);
   background-size: cover;
   cursor: pointer;
@@ -115,14 +117,12 @@
 .cardDestaque3{
   justify-content: flex-start;
   color: white;
-  padding: 5px 10px;
   width: 31vw;
   height: 33vh;
   background: rgb(0, 0, 0);
   color: white;
   font-size: 15px;
   border-radius: 10px; 
-  margin-right: 20px;
   background-image: url(/imgJogos/cs2.jpg);
   background-size: cover;
   cursor: pointer;
@@ -145,14 +145,14 @@
 .cardPromotion1{
   justify-content: flex-start;
   color: white;
-  padding: 5px 10px;
+
   width: 31vw;
   height: 33vh;
   background: rgb(0, 0, 0);
   color: white;
   font-size: 15px;
   border-radius: 10px; 
-  margin-right: 20px;
+
   background-image: url(/imgJogos/civilizationVI.jpg);
   background-size: cover;
   box-shadow: 1px 2vh 25px black;
@@ -162,14 +162,14 @@
 .cardPromotion2{
   justify-content: flex-start;
   color: white;
-  padding: 5px 10px;
+
   width: 31vw;
   height: 33vh;
   background: rgb(0, 0, 0);
   color: white;
   font-size: 15px;
   border-radius: 10px; 
-  margin-right: 20px;
+
   background-image: url(/imgJogos/itTakesTwo.jpg);
   background-size: cover;
   box-shadow: 1px 2vh 25px black;
@@ -179,14 +179,14 @@
 .cardPromotion3{
   justify-content: flex-start;
   color: white;
-  padding: 5px 10px;
+
   width: 31vw;
   height: 33vh;
   background: rgb(0, 0, 0);
   color: white;
   font-size: 15px;
   border-radius: 10px; 
-  margin-right: 20px;
+ 
   background-image: url(/imgJogos/readDead_ll.jpg);
   background-size: cover;
   box-shadow: 1px 2vh 25px black;
@@ -199,14 +199,14 @@
 .cardMaisVendidos1{
   justify-content: flex-start;
   color: white;
-  padding: 5px 10px;
+
   width: 31vw;
   height: 33vh;
   background: rgb(0, 0, 0);
   color: white;
   font-size: 15px;
   border-radius: 10px; 
-  margin-right: 20px;
+
   background-image: url(/imgJogos/gtaV.jpeg);
   background-size: cover;
   box-shadow: 1px 2vh 25px black;
@@ -216,14 +216,14 @@
 .cardMaisVendidos2{
   justify-content: flex-start;
   color: white;
-  padding: 5px 10px;
+ 
   width: 31vw;
   height: 33vh;
   background: rgb(0, 0, 0);
   color: white;
   font-size: 15px;
   border-radius: 10px; 
-  margin-right: 20px;
+
   background-image: url(../imgJogos/batmanArkhanKnight.png);
   background-size: cover;
   box-shadow: 1px 2vh 25px black;
@@ -233,14 +233,14 @@
 .cardMaisVendidos3{
   justify-content: flex-start;
   color: white;
-  padding: 5px 10px;
+
   width: 31vw;
   height: 33vh;
   background: rgb(0, 0, 0);
   color: white;
   font-size: 15px;
   border-radius: 10px; 
-  margin-right: 20px;
+
   background-image: url(/imgJogos/detroidBecome.jpg);
   background-size: cover;
   box-shadow: 1px 2vh 25px black;
@@ -260,8 +260,10 @@
     padding: 8px;
   }
   #cardJogo{
+    padding: 5px 6px;
+    margin-right: 10px;
     scale: 85%;
-    flex: 0 0 400px;        /* não encolhe/não cresce, largura 300px */
+    flex: 0 0 500px;        /* não encolhe/não cresce, largura 300px */
     box-sizing: border-box;
     min-height: 180px;
     border-radius: 8px;
