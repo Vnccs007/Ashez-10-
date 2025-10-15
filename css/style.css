@@ -260,11 +260,12 @@
     padding: 8px;
   }
   #cardJogo{
+    scale: 90%;
     flex: 0 0 500px;        /* não encolhe/não cresce, largura 300px */
     box-sizing: border-box;
     min-height: 180px;
     border-radius: 8px;
     width: 50vw;
   }
-  
+
 }
