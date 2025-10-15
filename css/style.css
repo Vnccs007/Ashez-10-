@@ -252,34 +252,19 @@
   .titleSection{
     font-size: 100%;
   }
-  .cardDestaque1{
-    width: 100vw;
-    background-position: -40px ;
+  .cards {
+    display: flex;
+    gap: 16px;
+    flex-wrap: nowrap;      /* não empilha em várias linhas */
+    overflow-x: auto;       /* permite rolar horizontalmente no celular */
+    -webkit-overflow-scrolling: touch;
+    padding: 8px;
   }
-  .cardDestaque2{
-    display: none;
-  }
-  .cardDestaque3{
-    display: none;
-  }
-  /* CARD PROMOTION */
-  .cardPromotion1{
-    width: 100vw;
-  }
-  .cardPromotion2{
-    display: none;
-  }
-  .cardPromotion3{
-    display: none;
-  }
-  /* CARD MAIS VENDIDOS */
-  .cardMaisVendidos1{
-    width: 100vw;
-  }
-  .cardMaisVendidos2{
-    display: none;
-  }
-  .cardMaisVendidos3{
-    display: none;
+  #cardJogo{
+    flex: 0 0 300px;        /* não encolhe/não cresce, largura 300px */
+    box-sizing: border-box;
+    min-height: 180px;
+    border-radius: 8px;
+    background: #fff;
   }
 }
