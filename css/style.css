@@ -267,4 +267,8 @@
     border-radius: 8px;
     background-position: -60px;
   }
+  .cardDestaque1{
+    background-position: -20px;
+    background-size: 90%;
+  }
 }
