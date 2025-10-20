@@ -247,7 +247,7 @@
   cursor: pointer;
 }
 
-@media(max-width: 678px){
+@media(max-width: 1000px){
   .titleSection{
     font-size: 100%;
   }
@@ -268,5 +268,11 @@
     min-height: 180px;
     border-radius: 8px;
   }
-
+  .cards{
+    padding: 0px 0px;
+    margin-left: 0px;
+  }
+  .fundoCards{
+    padding: 0px 0px;
+  }
 }
