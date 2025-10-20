@@ -6,7 +6,10 @@ body{
     background-size: 170% 170%; 
     animation: changeGradient 6.2s ease infinite; 
     background-attachment: fixed; /* deixa fixo na tela */
- }
+    margin: 0;
+    padding: 0;
+  }
+  
  .containerTelaPrincipal{
 
   position: relative;
@@ -54,7 +57,12 @@ body{
 /* barra do nome */
  .namebar{
    padding-right: 50px;
+   border-radius: 4px;
  }
+.namebar:focus{
+  border: none;
+  text-decoration: none;
+}
  /* .namebar:hover{
   scale: 106%;
  } */

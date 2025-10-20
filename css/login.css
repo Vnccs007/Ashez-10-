@@ -6,6 +6,8 @@ body{
     background-size: 170% 170%; 
     animation: changeGradient 6.2s ease infinite; 
     background-attachment: fixed; /* deixa fixo na tela */
+    margin:0;
+    
  }
  .containerTelaPrincipal{
   position: relative;
