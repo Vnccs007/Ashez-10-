@@ -3,50 +3,185 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Configurações</title>
-        <link rel="icon" href="../imgGeral/ashezSemFundo.png"/>
-        <link rel="stylesheet" href="../css/global.css">
+        <title>Configurações - Ashez</title>
         <link rel="stylesheet" href="../css/config.css">
-        <script src="../js/main.js"></script>
-    </head>
+        <script src="https://kit.fontawesome.com/a2d9a64e54.js" crossorigin="anonymous"></script>
+        </head>
     <body>
-        <header class="config-header">
-            <a href="/index.html">
-            <img class="simbolo-ashez" src="/imgGeral/logoAshez.png" alt="Home">
+
+        <!-- NAVBAR -->
+        <header class="navbar">
+            <div class="logo-area">
+            <a href="/index.html" class="logo-link">
+                <img class="logo-ashez" src="/imgGeral/logoAshez.png" alt="Ashez">
+                <span class="nome-ashez">Ashez</span>
             </a>
+            </div>
+
             <div class="user-menu">
             <button class="usuario-btn" onclick="toggleMenu()"></button>
             <div id="usuarioDropdown" class="dropdown">
                 <div class="username">
-                <button class="usuario-btn"></button> 
-                <label class="names">var Nome do Usuário</label>
+                <button class="usuario-btn"></button>
+                <label class="names">variavel</label>
                 </div>
                 <a href="#">Amigos</a>
-                <a href="#">Meus Jogos</a>
+                <a href="#">Jogos</a>
                 <a href="#">Lista de Desejos</a>
                 <a href="#">Suporte</a>
             </div>
             </div>
         </header>
 
-        <main class="config-container">
-            <h1>CONFIGURAÇÕES</h1>
+        <!-- CONTEÚDO -->
+        <div class="config-wrapper">
+            <!-- SIDEBAR -->
+            <aside class="sidebar">
+                <button class="sidebar-btn active" onclick="mostrarTela(event, 'perfil')">
+                    <i class="fa-solid fa-user"></i> Meu Perfil
+                </button>
+                <button class="sidebar-btn" onclick="mostrarTela(event, 'notificacoes')">
+                    <i class="fa-solid fa-bell"></i> Notificações
+                </button>
+                <button class="sidebar-btn" onclick="mostrarTela(event, 'privacidade')">
+                    <i class="fa-solid fa-lock"></i> Privacidade
+                </button>
+                <button class="sidebar-btn" onclick="mostrarTela(event, 'seguranca')">
+                    <i class="fa-solid fa-shield-halved"></i> Senha e Segurança
+                </button>
+                <button class="sidebar-btn" onclick="mostrarTela(event, 'desconectar')">
+                    <i class="fa-solid fa-right-from-bracket"></i> Desconectar
+                </button>
+            </aside>
 
-            <div class="search-box">
-                <img class="imgEngrenagem" src="/imgGeral/configuracao-removebg-preview.png" alt="Ícone de Engrenagem de Configurações">
-                <div class="divider"></div>
-                <img class="lupa" src="/imgGeral/lupa-removebg-preview.png" alt="Ícone de Lupa de Pesquisa">
-                <input type="text" placeholder="Buscar configuração">
-            </div>
+            <!-- CONTEÚDO PRINCIPAL -->
+            <main class="conteudo">
 
-            <div class="buttons-box">
-                <div class="buttons">
-                    <button>Notificações</button>
-                    <button>Redefinir Senha</button>
-                    <button>Privacidade</button>
-                    <button>Desconectar</button>
+            <section id="perfil" class="tela ativa">
+                <h2>Meu Perfil</h2>
+                <div class="perfil-info">
+                    <div class="foto-container">
+                    <img id="fotoPerfilPreview" src="/imgGeral/userFoto.png" alt="Foto do Usuário" class="foto-perfil">
+                    <div>
+                        <button id="btnAlterarFoto" class="btn pequeno">Alterar Foto</button>
+                        <input id="inputFoto" type="file" accept="image/*" capture="environment" style="display:none">
+                    </div>
+                    </div>
+
+                    <p><strong>Nome: </strong><var>nomeUsuario</var></p>
+
+                    <div class="linha-exibicao">
+                    <label><strong>Nome de exibição: </strong></label>
+                    <input type="text" class="input-texto" value="nickUsuario">
+                    </div>
+
+                    <p><strong>Email: </strong><var>emailUsuario</var></p>
+                    <button class="btn">Salvar Alterações</button>
                 </div>
-            </div>
-        </main>
+            </section>
+
+            <section id="seguranca" class="tela">
+                <h2>Senha e Segurança</h2>
+                <p>Gerencie sua senha e altere suas credenciais com segurança.</p>
+
+                <label for="senha-atual">Senha atual:</label>
+                <div class="campo-senha">
+                    <input type="password" id="senha-atual" class="input-texto" placeholder="Digite sua senha atual">
+                    <button class="olho-btn" data-target="senha-atual" title="Ver senha"><i class="fa-solid fa-eye"></i></button>
+                </div>
+
+                <label for="nova-senha">Nova senha:</label>
+                <div class="campo-senha">
+                    <input type="password" id="nova-senha" class="input-texto" placeholder="Nova senha">
+                    <button class="olho-btn" data-target="nova-senha" title="Ver senha"><i class="fa-solid fa-eye"></i></button>
+                </div>
+
+                <label for="conf-senha">Confirmar nova senha:</label>
+                <div class="campo-senha">
+                    <input type="password" id="conf-senha" class="input-texto" placeholder="Repita a nova senha">
+                    <button class="olho-btn" data-target="conf-senha" title="Ver senha"><i class="fa-solid fa-eye"></i></button>
+                </div>
+
+                <button class="btn">Alterar Senha</button>
+            </section>
+            <!-- NOTIFICAÇÕES -->
+            <section id="notificacoes" class="tela">
+                <h2>Notificações</h2>
+                <label class="check-box"><input type="checkbox" checked> Receber promoções</label><br>
+                <label class="check-box"><input type="checkbox" checked> Atualizações de jogos</label><br>
+                <label class="check-box"><input type="checkbox"> Emails de parceiros</label>
+            </section>
+
+            <!-- PRIVACIDADE -->
+            <section id="privacidade" class="tela">
+                <h2>Privacidade</h2>
+                <p>Gerencie quem pode ver suas informações e atividades dentro da Ashez.</p>
+                <div class="opcao-priv first-opcao">
+                    <p><strong>Visibilidade do perfil</strong></p>
+                    <div class="linha-opcao">
+                        <div class="switch" data-type="perfil">
+                            <div class="slider"></div>
+                        </div>
+                        <span class="status-text">Privado</span>
+                    </div>
+                </div>
+                <br/>
+                <div class="opcao-priv">
+                    <p><strong>Status online</strong></p>
+                    <div class="linha-opcao">
+                        <div class="switch" data-type="online">
+                            <div class="slider"></div>
+                        </div>
+                        <span class="status-text">Desativado</span>
+                    </div>
+                </div>
+                <br/>
+                <div class="opcao-priv">
+                    <p><strong>Mensagens de desconhecidos</strong></p>
+                    <div class="linha-opcao">
+                        <div class="switch" data-type="mensagens">
+                            <div class="slider"></div>
+                        </div>
+                        <span class="status-text">Desativado</span>
+                    </div>
+                </div>
+                <br/>
+                <button class="btn salvar">Salvar Preferências</button>
+            </section>
+
+            <!-- SENHA E SEGURANÇA -->
+            <section id="seguranca" class="tela">
+                <h2>Senha e Segurança</h2>
+                <p>Gerencie sua senha e altere suas credenciais com segurança.</p>
+                <label for="senha-atual">Senha atual:</label>
+                <div class="campo-senha">
+                    <input type="password" id="senha-atual" class="input-texto" placeholder="Digite sua senha atual">
+                    <button class="olho-btn" title="Ver senha"><i class="fa-solid fa-eye"></i></button>
+                </div>
+                <label for="nova-senha">Nova senha:</label>
+                <div class="campo-senha">
+                    <input type="password" id="nova-senha" class="input-texto" placeholder="Nova senha">
+                    <button class="olho-btn" title="Ver senha"><i class="fa-solid fa-eye"></i></button>
+                </div>
+                <label for="conf-senha">Confirmar nova senha:</label>
+                <div class="campo-senha">
+                    <input type="password" id="conf-senha" class="input-texto" placeholder="Repita a nova senha">
+                    <button class="olho-btn" title="Ver senha"><i class="fa-solid fa-eye"></i></button>
+                </div>
+                <button class="btn">Alterar Senha</button>
+            </section>
+
+            <!-- DESCONECTAR -->
+            <section id="desconectar" class="tela">
+                <h2>Desconectar</h2>
+                <p>Tem certeza de que deseja sair da conta?</p>
+                <button class="btn sair">Sair da conta</button>
+            </section>
+
+            </main>
+        </div>
+
+        <script src="../js/main.js"></script>
+        <script src="../js/config.js"></script>
     </body>
 </html>
