@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const reader = new FileReader();
       reader.onload = e => {
         preview.src = e.target.result;
-      };
+      };  
       reader.readAsDataURL(file);
 
       // aqui você pode enviar o arquivo via fetch/ajax para o backend se quiser
