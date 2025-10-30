@@ -80,13 +80,13 @@
 /* CARDS DESTAQUES */
 
 .imgsCard{
-  width: 31vw;
+  width: 33vw;
   border-radius: 10px;
   transition: 1s ease;
 }
 
 .imgsCard:hover{
-    transform: scale(1.150);
+    transform: scale(1.100);
 }
 .cardsHome{
   position: relative;
