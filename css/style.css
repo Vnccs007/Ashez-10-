@@ -89,6 +89,7 @@
 
 .imgsCard:hover{
     transform: scale(1.100);
+    filter: brightness(1.05);
 }
 .cardsHome{
   position: relative;
@@ -115,6 +116,25 @@
   cursor: pointer;
   text-decoration: underline;
   
+}
+
+.container-card{
+  width: 31VW;
+  height: 30vh;
+  display: flex;
+  margin-top: 4vw;
+  flex-direction: row;
+}
+.imgsCard-container{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: 1s ease;
+  object-fit: cover;
+}
+.pp{
+  margin-left: 10px;
+  color: gainsboro;
 }
 .footer-conteudo{
     display: flex;
