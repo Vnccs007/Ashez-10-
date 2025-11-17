@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Destaques na Ashez</title>
+        <link rel="icon" href="../imgGeral/ashezSemFundo.png"/>
+        <link rel="stylesheet" href="../css/global.css"/>
+        <link rel="stylesheet" href="../css/destaque.css"/>
+    </head>
+    <body>
+        <nav class="Navbar">
+            <div class="container">
+                <a href="../index.html"> <img src="../imgGeral/logoAshez.png" alt="Ícone da Ashez" class="simbolo-ashez"></a>
+                <img src="../imgGeral/lupa_pesquisa.png" alt="Símbolo da Barra de Pesquisa" class="lupa">
+                <form class="barra-pesquisa" role="search">
+                    <input class="barra-de-pesquisa" type="search" placeholder="Buscar por Jogos" aria-label="Search"/>
+                    <button class="button-pesquisa" type="submit">Buscar</button>
+                </form>
+                <div class="user-menu">
+                    <button class="usuario-btn" onclick="toggleMenu()"></button>
+                    <div id="usuarioDropdown" class="dropdown">
+                            <div class="username">
+                                <button class="usuario-btn"></button> 
+                                <label class="names"> variavel Nome do user</label>
+                            </div>
+                        <a href="config.html">Configurações</a>
+                        <a href="#">Amigos</a>
+                        <a href="#"> Meus Jogos</a>
+                        <a href="#">Lista de Desejos</a>
+                        <a href="#">Suporte</a>
+                    </div>
+                </div>
+            </div>
+        </nav> <br/> <br/><br/><br/><br/><br/>
+        
+            <!-- PRINCIPAIS DESTAQUES -->
+             <div class="fundocards">
+                <p class="titleSection"> Principais Destaques  </p> <br/>
+                <div class="cardsDestaquePrincipal">
+                    <div class="cards"> 
+                            <div class="card1"  id="cardDestaque"> <label class="boxPrice"> R$279,90 </label> </div> 
+                            <div class="card2"  id="cardDestaque"> <label class="boxPrice"> R$299,00 </label></div>
+                            <div class="card3"  id="cardDestaque"> <label class="boxPricePromotion">Grátis</label></div>
+                    </div> <br/><br/>
+
+                    <div class="cards"> 
+                        <div class="card4"  id="cardDestaque"> <label class="boxPrice"> R$299,90 </label> </div> 
+                        <div class="card5"  id="cardDestaque"> <label class="boxPrice"> R$199,90 </label></div>
+                        <div class="card6"  id="cardDestaque"> <label class="boxPricePromotion"> R$74,90 </label></div>
+                    </div> <br/><br/>
+
+                    <div class="cards"> 
+                        <div class="card7"  id="cardDestaque"> <label class="boxPricePromotion"> R$174,30 </label> </div> 
+                        <div class="card8"  id="cardDestaque"> </div>
+                        <div class="card9"  id="cardDestaque"> <label class="boxPrice"> R$135,00 </label></div>
+                    </div> 
+                </div> <br/><br/><br/><br/><br/>
+
+                <!-- DESTQUES DA SEMANA -->
+                <p class="titleSection"> Destaques da semana  </p> <br/>
+                <div class="cardDestaqueSemana">
+                    <div class="cards"> 
+                        <div class="cardPromocaSemana1"  id="cardPromocao"> <label class="boxPricePromotion"> R$12,49 </label> </div> 
+                        <div class="cardPromocaoSemana2"  id="cardPromocao"> <label class="boxPrice"> R$84,90 </label></div>
+                        <div class="cardPromocaoSemana3"  id="cardPromocao"> <label class="boxPricePromotion"> Grátis </label></div>
+                    </div> <br/><br/>
+
+                    <div class="cards"> 
+                        <div class="cardDestaqueSemana4"  id="cardDestaque"> <label class="boxPricePromotion"> Grátis </label> </div> 
+                        <div class="cardDestaqueSemana5"  id="cardDestaque"> <label class="boxPrice"> R$55,79 </label></div>
+                        <div class="cardDestaqueSemana6"  id="cardDestaque"> <label class="boxPricePromotion"> R$74,90 </label></div>
+                    </div> 
+
+                    <div class="cards"> 
+                        <div class="cardPromocaoSemana7"  id="cardDestaque"> <label class="boxPrice"> R$279,99 </label> </div> 
+                        <div class="cardPromocaoSemana7"  id="cardDestaque"> <label class="boxPrice"> R$279,99 </label> </div> 
+                        <div class="cardPromocaoSemana7"  id="cardDestaque"> <label class="boxPrice"> R$279,99 </label> </div> 
+                        <div class="cardPromocaoSemana8"  id="cardDestaque"> <label class="boxPricePromotion"> R$74,90 </label></div>
+                        <div class="cardPromocaoSemana9"  id="cardPromocao"> <label class="boxPrice"> R$60,90</label></div>
+                        <div class="cardPromocaoSemana9"  id="cardPromocao"> <label class="boxPrice"> R$60,90</label></div>
+                    </div>  <br/><br/><br/><br/><br/>
+                </div>
+                
+                <p class="titleSection"> Promoções da semana  </p> <br/>
+            </div>
+              
+        <script src="../js/script.js"></script>
+        <script src="../js/main.js"></script>
+    </body>
+</html>
