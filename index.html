@@ -28,7 +28,7 @@
                         <a href="#">Amigos</a>
                         <a href="#">Meus Jogos</a>
                         <a href="#">Lista de Desejos</a>
-                        <a href="#">Suporte</a>
+                        <a href="./pages/suporte.html">Suporte</a>
                     </div>
                 </div>
             </div>
@@ -44,7 +44,7 @@
             <div class="cards"> 
                 <div class="cardsHome" id="#" > <span class="boxPrice"> R$279,99 </span> <img src="./imgJogos/mk11.jpg" class="imgsCard">  </div>
                 <div class="cardsHome" id="#"> <span class="boxPrice"> R$299,90 </span> <img src="./imgJogos/fc26.jpg" class="imgsCard"></div>
-                <div class="cardsHome" id="#"> <span class="boxPricePromotion"> Grátis </span><img src="./imgJogos/cs2.jpg" class="imgsCard"> </div>
+                <div class="cardsHome" id="cs2"> <span class="boxPricePromotion"> Grátis </span><img src="./imgJogos/cs2.jpg" class="imgsCard"> </div>
             </div> 
             <a class="verMais" href="pages/destaques.html"> Ver mais</a> <br/>
 
@@ -67,32 +67,61 @@
             <a class="verMais" href="pages/destaques.html"> Ver mais</a> <br/>
         </div> 
 
-        <div class="fundo-container-card"> 
-            <div class="container-card">
-                <img src="./imgJogos/f1.jpg" alt="f1" class="imgsCard-container"> <br/>
-                <p class="pp"> ASOADOSod</p> 
-                <!-- colocar video dos jofo -->
-            </div>
-        </div>
-           
-        <div class="fundo-container-card"> 
-            <div class="container-card">
-                <img src="./imgJogos/f1.jpg" alt="f1" class="imgsCard-container"> <br/>
-                <p class="pp"> ASOADOSod</p> 
-                <!-- colocar video dos jofo -->
-            </div>
-        </div>
-            
-        <div class="fundo-container-card"> 
-            <div class="container-card">
-                <img src="./imgJogos/f1.jpg" alt="f1" class="imgsCard-container"> <br/>
-                <p class="pp"> ASOADOSod</p> 
-                <!-- colocar video dos jofo -->
-            </div>
-        </div>
+        <!-- MODAL -->
+        <dialog id="dialog">
+           <div class="modal">
+            <button id="fecharModal"> X </button>
 
-         
-        
+            <img src="./imgJogos/cs2.jpg" class="imgModal" alt="cs2">
+           </div>
+        </dialog>
+
+        <script>
+            var modal_open = document.querySelector('#cs2');
+            var cancel =document.querySelector('#fecharModal')
+
+            modal_open.addEventListener('click', () => {
+                dialog.showModal();
+
+                requestAnimationFrame(() => {
+                 dialog.classList.add("open");
+               });
+            });
+
+            cancel.addEventListener("click", () => {
+                dialog.close();
+            
+            });
+        </script>  
+             <section class="generos">
+            <p class="titleSection"><b>Explore por Gênero</b></p>
+            <div class="generosContainer">
+                <button class="scroll-btn left">&#10094;</button>
+                <div class="generosScroll">
+                    <div class="genero">
+                        <img src="imgGeral/jogosEsporte.png" class="iconeGenero" alt="Esporte">
+                        <label class="boxGenero">Esporte</label>
+                    </div>
+                    <div class="genero">
+                        <img src="imgGeral/jogosCorrida.png" class="iconeGenero" alt="Corrida">
+                        <label class="boxGenero">Corrida</label>
+                    </div>
+                    <div class="genero">
+                        <img src="imgGeral/jogosAventura.png" class="iconeGenero" alt="Aventura">
+                        <label class="boxGenero">Aventura</label>
+                    </div>
+                    <div class="genero">
+                        <img src="imgGeral/jogosRPG.png" class="iconeGenero" alt="RPG">
+                        <label class="boxGenero">RPG</label>
+                    </div>
+                    <div class="genero">
+                        <img src="imgGeral/jogosTiro.png" class="iconeGenero" alt="Tiro">
+                        <label class="boxGenero">Tiro</label>
+                    </div>
+                </div>
+                <button class="scroll-btn right">&#10095;</button>
+            </div>
+        </section>
          <footer>
                 <div class="footer-conteudo">
                     <img src="imgGeral/ashezSemFundo.png" alt="" class="simbolo-footer">

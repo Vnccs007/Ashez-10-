@@ -113,3 +113,51 @@ window.addEventListener('load', () => {
 window.addEventListener('resize', () => {
   updateCarousel();
 });
+const scrollContainer = document.querySelector('.generosScroll');
+const btnLeft = document.querySelector('.scroll-btn.left');
+const btnRight = document.querySelector('.scroll-btn.right');
+
+let scrollPosition = 0;
+const itemWidth = scrollContainer.clientWidth; // largura visível (3 itens por vez)
+
+function updateButtons() {
+  const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+
+  // se estiver no início
+  if (scrollPosition <= 0) {
+    btnLeft.style.display = 'none';
+  } else {
+    btnLeft.style.display = 'block';
+  }
+
+  // se estiver no final
+  if (scrollPosition >= maxScroll) {
+    btnRight.style.display = 'none';
+  } else {
+    btnRight.style.display = 'block';
+  }
+}
+
+btnLeft.addEventListener('click', () => {
+  scrollPosition = Math.max(scrollPosition - itemWidth, 0);
+  scrollContainer.scrollTo({
+    left: scrollPosition,
+    behavior: 'auto'
+  });
+  updateButtons();
+});
+
+btnRight.addEventListener('click', () => {
+  const maxScroll = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+  scrollPosition = Math.min(scrollPosition + itemWidth, maxScroll);
+  scrollContainer.scrollTo({
+    left: scrollPosition,
+    behavior: 'auto'
+  });
+  updateButtons();
+});
+
+// Atualiza visibilidade ao carregar
+window.addEventListener('load', updateButtons);
+// E também se a tela for redimensionada
+window.addEventListener('resize', updateButtons);

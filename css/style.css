@@ -118,6 +118,180 @@
   
 }
 
+.container-card{
+  width: 31VW;
+  height: 30vh;
+  display: flex;
+  margin-top: 4vw;
+  flex-direction: row;
+}
+.imgsCard-container{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: 1s ease;
+  object-fit: cover;
+}
+.pp{
+  margin-left: 10px;
+  color: gainsboro;
+}
+
+
+
+/* MODAL */
+.modal{
+  width: 85vw;
+  height: 75vh;
+}
+dialog::backdrop {
+    background: rgba(0, 0, 0, 0);
+    transition: background 0.3s ease;
+    margin: auto;
+  
+}
+
+dialog[open]::backdrop {
+    background: rgba(0, 0, 0, 0.5);
+
+}
+
+dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0;
+  border-radius: 10px;
+  background-color: #363434;
+  border: none;
+}
+
+.modal {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.3s ease, transform 0.3s ease;   
+}
+dialog.open .modal {
+    opacity: 1;
+    transform: scale(1);
+
+}
+
+.imgModal{
+  height: 60vh;
+  width: 40vw;
+}
+
+#fecharModal{
+  padding: 1vw;
+  margin-left: 95%;
+  margin-top: 1%;
+  border: none;
+  background: (0,0,0,0,0);
+}
+
+.generos{
+  margin-top: 2vw;
+  background-color: #3B3937;
+  border-radius: 1.5vw;
+  padding: 1vw 1.5vw;
+}
+.iconeGenero{
+  width: 25vw;
+  margin-right: 1vw;
+  cursor: pointer;
+  margin-top: 5vw;
+}
+.boxGenero{
+  color: white;
+  font-size: 100%;
+  display: block;
+  text-align: center;
+  margin-top: 8px;
+  cursor: pointer;
+}
+.generosContainer{
+  display: flex;
+  gap: 7vw;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+/*scrool*/
+.generosScroll {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 5vw;
+  padding: 1vw 0;
+  scrollbar-width: none;
+}
+
+.generosScroll::-webkit-scrollbar {
+  display: none;
+}
+
+/* Cada item */
+.genero {
+  flex: 0 0 5vw;
+  text-align: center;
+  width: 100%;
+}
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: white;
+  border: none;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 0.5vw 0.7vw;
+  border-radius: 0.5vw;
+  z-index: 2;
+  transition: background-color 0.3s;
+  opacity: 1;
+  transition: opacity 3s ease;
+}
+
+.scroll-btn[style*="display: none"] {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.scroll-btn:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+.scroll-btn.left {
+  left: 0;
+}
+
+.scroll-btn.right {
+  right: 0;
+}
+
+
+
+.footer-conteudo{
+    display: flex;
+    align-items: center; 
+    text-align: center;
+    gap: 8px;
+}
+footer {
+  background-color: rgba(29, 26, 26, 0.1); 
+  color: #ccc;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; 
+  text-align: center;
+  padding: 15px 0;
+  font-family: Arial, sans-serif;
+  gap: 10px;
+}
 footer a {
   text-decoration: none; /* sem sublinhado */
   color: #ccc;           /* cor dos links */

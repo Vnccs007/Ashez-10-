@@ -1,0 +1,107 @@
+
+.fundocards{
+  border-radius: 20px;
+  padding: 20px 30px;
+}
+.titleSection{
+  font-size: 130%;
+  color: white;
+}
+
+/* cards de após o carousel */
+.cards{
+  display: flex;
+  
+}
+.boxPrice{
+  background-color: #363434;
+  text-align: right;
+  position: absolute;
+  padding: 14px;
+  text-align: right;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-left: 1vw;
+  z-index: 10;
+}
+.boxPricePromotion{
+  position: absolute;
+  background-color: #5bc251;;
+  padding: 14px;
+  text-align: right;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-left: 1vw;
+  z-index: 10;
+}
+#cardPromocao{
+  justify-content: flex-start;
+  color: white;
+  padding: 5px 10px;
+  width: 31vw;
+  height: 33vh;
+  color: white;
+  font-size: 15px;
+  color: white;
+  font-size: 15px;
+  border-radius: 10px; 
+  margin-right: 20px;
+  box-shadow: 1px 2vh 25px black;
+  cursor: pointer;
+  background-size: cover;
+}
+.imgsCard{
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  transition: 1s ease;
+  object-fit: cover;
+}
+
+.imgsCard:hover{
+    transform: scale(1.100);
+    filter: brightness(1.05);
+}
+.cardsPromocao{
+  position: relative;
+  justify-content: flex-start;
+  color: white;
+  width: 31vw;
+  height: 33vh;
+  background: rgb(0, 0, 0);
+  color: white;
+  font-size: 15px;
+  border-radius: 10px; 
+  box-shadow: 1px 2vh 25px black;
+  cursor: pointer;
+  overflow: hidden;
+  margin-right: 1vw;
+}
+.verMais{
+  display: block;
+  color: white;
+  text-align: right;
+  margin-top: 2vh;
+  margin-right: 2vw;
+  cursor: pointer;
+  text-decoration: underline;
+}
+@media(max-width: 780px){
+  /* navbar mobile */
+  .Navbar{
+    display: flex;           
+    align-items: center;  
+    justify-content: space-between; 
+  }
+  .simbolo-ashez{
+    width: 10vw;
+  }
+  .button-pesquisa{
+    display: none;
+  }
+  .barra-pesquisa{
+    flex: 1;
+    margin: 0 8px;
+    max-width: 35%
+  }
+}
