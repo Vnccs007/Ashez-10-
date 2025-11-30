@@ -14,6 +14,7 @@
                 <a href="index.html"><img src="/imgGeral/logoAshez.png" alt="Ícone da Ashez" class="simbolo-ashez"></a>
                 <img src="imgGeral/lupa_pesquisa.png" alt="Símbolo da Barra de Pesquisa" class="lupa">
                 <form class="barra-pesquisa" role="search">
+                    <div id="resultados-pesquisa" class="resultados-pesquisa"></div>
                     <input class="barra-de-pesquisa" type="search" placeholder="Buscar por Jogos" aria-label="Search"/>
                     <button class="button-pesquisa" type="submit">Buscar</button>
                 </form>
@@ -32,7 +33,7 @@
                     </div>
                 </div>
             </div>
-        </nav><br/><br/><br/><br/>
+        </nav> <br/><br/><br/><br/>
         <div class="carousel-container">
             <div class="carousel-track" id="carousel-track">
             </div>
@@ -42,18 +43,18 @@
         <div class="fundoCards">
             <p class="titleSection"> Destaques </p> <br/>
             <div class="cards"> 
-                <div class="cardsHome" id="#" > <span class="boxPrice"> R$279,99 </span> <img src="./imgJogos/mk11.jpg" class="imgsCard">  </div>
-                <div class="cardsHome" id="#"> <span class="boxPrice"> R$299,90 </span> <img src="./imgJogos/fc26.jpg" class="imgsCard"></div>
-                <div class="cardsHome" id="cs2"> <span class="boxPricePromotion"> Grátis </span><img src="./imgJogos/cs2.jpg" class="imgsCard"> </div>
+                <div class="cardsHome" id="#" > <span class="boxPrice"> R$279,99 </span> <img src="./imgJogos/mk11.jpg" alt="Mortal Kombat 11" class="imgsCard">  </div>
+                <div class="cardsHome" id="#"> <span class="boxPrice"> R$299,90 </span> <img src="./imgJogos/fc26.jpg" alt="EA Sporte 26" class="imgsCard"></div>
+                <div class="cardsHome" id="cs2"> <span class="boxPricePromotion"> Grátis </span><img src="./imgJogos/cs2.jpg" alt="Counter Strick 2" class="imgsCard"> </div>
             </div> 
             <a class="verMais" href="pages/destaques.html"> Ver mais</a> <br/>
 
             <!-- PROMOCAO LIMITADA -->
             <p class="titleSection"> <b> Promoção Limitada </b> </p> <br/>
             <div class="cards"> 
-                <div class="cardsHome" id="#"> <span class="boxPricePromotion"> R$50,90 </span> <img src="./imgJogos/civilizationVI.jpg" alt="civilizationVI" class="imgsCard"></div>
-                <div class="cardsHome" id="#"> <span class="boxPricePromotion"> R$29,90 </span> <img src="./imgJogos/itTakesTwo.jpg" alt="itTakesTwo" class="imgsCard"></div>
-                <div class="cardsHome" id="#"> <span class="boxPricePromotion"> R$74,90 </span> <img src="./imgJogos/readDead_ll.jpg" alt="readDead_ll" class="imgsCard"></div>
+                <div class="cardsHome" id="#"> <span class="boxPricePromotion"> R$50,90 </span> <img src="./imgJogos/civilizationVI.jpg" alt="Civilization 6" class="imgsCard"></div>
+                <div class="cardsHome" id="#"> <span class="boxPricePromotion"> R$29,90 </span> <img src="./imgJogos/itTakesTwo.jpg" alt="it Takes Two" class="imgsCard"></div>
+                <div class="cardsHome" id="#"> <span class="boxPricePromotion"> R$74,90 </span> <img src="./imgJogos/readDead_ll.jpg" alt="Red Dead Redemption 2" class="imgsCard"></div>
             </div>
             <a class="verMais" href="pages/destaques.html"> Ver mais</a> <br/>
 
@@ -70,8 +71,7 @@
         <!-- MODAL -->
         <dialog id="dialog">
            <div class="modal">
-            <button id="fecharModal"> X </button>
-
+            <span id="fecharModal"> X </span>
             <img src="./imgJogos/cs2.jpg" class="imgModal" alt="cs2">
            </div>
         </dialog>
@@ -138,7 +138,64 @@
                     <a href="#"><img src="/imgGeral/envelope.svg" alt=""></a>
                 </div>
         </footer>
-        
+        <div class="jogosTudo">
+            <div class="jogo">
+                <img src="./imgJogos/mk11.jpg" alt="Mortal Kombat 11" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/fc26.jpg" alt="EA Sports FC 26" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/cs2.jpg" alt="Counter Strike 2" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/civilizationVI.jpg" alt="Civilization VI" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/itTakesTwo.jpg" alt="It Takes Two" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/readDead_ll.jpg" alt="Red Dead Redemption 2" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/gtaV.jpeg" alt="GTA V" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/batmanArkhanKnight.png" alt="Batman Arkham Knight" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/detroidBecome.jpg" alt="Detroit Become Human" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="../imgJogos/TheLastOfUs_ll.jpg" alt="The Last Of Us Part II" class="imgsCard">
+            </div>
+
+            <div class="jogo">
+                <img src="../imgJogos/f1.jpg" alt="Fórmula 1" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="../imgJogos/marvelRivals.jpg" alt="Marvel Rivals" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="../imgJogos/readyOrNot.jpg" alt="Ready or Not" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="../imgJogos/peak.jpg" alt="Peak" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="../imgJogos/rocketLeague.jpg" alt="Rocket League" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="../imgJogos/sifu.jpg" alt="Sifu" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="../imgJogos/godOfWar.jpeg" alt="God of War" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="../imgJogos/forzaHorizonIV.jpg" alt="Forza Horizon IV" class="imgsCard">
+            </div>
+        </div>
+
         <script src="js/script.js"></script>
         <script src="js/main.js"></script>
     </body>
