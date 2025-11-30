@@ -108,8 +108,9 @@ body{
 
 .resultado-item {
     display: flex;
+    
     align-items: center;
-    padding: 8px;
+    padding: 8px; 
     gap: 40px;
     cursor: pointer;
     transition: 0.5s ease-in-out;
