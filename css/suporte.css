@@ -1,22 +1,25 @@
 body{
-  height: 100%;
-  width: 100%;
-  background: fixed;
-  max-width: 100%;
-  background-image:linear-gradient(to bottom,black 20%,#404040);
-  transition: background-size 700ms ease-in-out, background-position-y 100ms ease-in
+ height: 100%;
+    width: 100%;
+    background:linear-gradient(to right, black 0.10%,#404040); 
+    background-size: 170% 170%; 
+    animation: changeGradient 3.2s ease infinite; 
+    background-attachment: fixed; /* deixa fixo na tela */
+    margin:0;
 }
 
 @keyframes changeGradient {
 0% { 
-  background-position: 50% 0%; 
+  background-position: 50% 0% 80%; 
 }
 50% { 
   background-position: 50% 70%;
 }
 100% {
-  background-position: 50% 0%;
+  background-position: 50% 0% 80%;
 }
+
+         
 }
 .Navbar {
   display: flex;           /* coloca os itens lado a lado */
