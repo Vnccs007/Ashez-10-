@@ -73,6 +73,13 @@ function atualizarSlidesEspecificos() {
         : 'imgJogos/mk11Mobile.jpg';
     }
 
+     if (indiceReal === 2) {
+      img.src = largura > 480
+        ? 'imgJogos/ghostTsushima.jpg'
+        : 'imgJogos/ghostTsushimaMobile.jpg';
+    }
+
+
      if (indiceReal === 3) {
       img.src = largura > 480
         ? 'imgJogos/legoBatman.jpg'
