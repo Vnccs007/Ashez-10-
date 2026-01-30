@@ -234,7 +234,11 @@ footer a:hover {
     padding: 2px;
   }
   .usuario-btn{
-    margin-left: 450%;
+    margin-left: 100%;
+  }
+  .user-menu{
+    max-width: 95%;
+    width: 43vw;
   }
   .simbolo-ashez{
     display: none;
