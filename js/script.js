@@ -19,9 +19,9 @@ const track = document.getElementById('carousel-track');
 const slidesContent = [
   'imgJogos/mk11.jpg',
   'imgJogos/codMWll.jpg',
-  'imgJogos/ghostTsushima.jpg',
-  'imgJogos/legoBatman.jpg',
   'imgJogos/readDead_ll.jpg',
+  'imgJogos/legoBatman.jpg',
+  'imgJogos/ghostTsushima.jpg',
   'imgJogos/forzaHorizonIV.jpg'
 
 ];
@@ -73,7 +73,7 @@ function atualizarSlidesEspecificos() {
         : 'imgJogos/mk11Mobile.jpg';
     }
 
-     if (indiceReal === 2) {
+     if (indiceReal === 4) {
       img.src = largura > 480
         ? 'imgJogos/ghostTsushima.jpg'
         : 'imgJogos/ghostTsushimaMobile.jpg';
@@ -86,7 +86,7 @@ function atualizarSlidesEspecificos() {
         : 'imgJogos/legoBatmanMobile.jpg';
     }
 
-    if (indiceReal === 4) {
+    if (indiceReal === 2) {
       img.src = largura > 480
         ? 'imgJogos/readDead_ll.jpg'
         : 'imgJogos/redDeadIIMobile.jpg';
