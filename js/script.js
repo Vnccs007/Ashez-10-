@@ -73,6 +73,12 @@ function atualizarSlidesEspecificos() {
         : 'imgJogos/mk11Mobile.jpg';
     }
 
+     if (indiceReal === 3) {
+      img.src = largura > 480
+        ? 'imgJogos/legoBatman.jpg'
+        : 'imgJogos/legoBatmanMobile.jpg';
+    }
+
     if (indiceReal === 4) {
       img.src = largura > 480
         ? 'imgJogos/readDead_ll.jpg'
