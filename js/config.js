@@ -106,3 +106,8 @@ function swapEyeIcon(btn, isVisible) {
     icon.classList.add('fa-eye');
   }
 }
+
+function desconectar() {
+    localStorage.removeItem('usuario'); // Remove apenas o item 'usuario'
+    window.location.assign("../index.html");
+}

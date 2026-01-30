@@ -13,3 +13,47 @@ Vini 11/10
 arrumei muito do css (box-shadow, margin, bacgorund); fiz a tela destaque com todos os cards; alterei a navbar 
 para ser nav inteligente, coloquei preço nos cards, sendo a classe: card1... Para preços sem promoção;
 e cardPromotion para jogos em promoção 
+
+Thii 01/11
+Criei o arquivo valores.js que serve para capturar os valores de login
+Criei o arquivo cadastro.js para enviar os valores cadastrados para o banco (Verificação com o banco ainda n concluida)
+Coloquei um id para cada input no cadastro.html
+Chamei ambos no arquivo de cadastro
+Chemei o valores.js na home
+Botão de desconectar nas configurações está funcionando
+O id padrão para quando não tem nenhum usuario logado é 3 (definido no valores.js)
+Criei um @GetMapping para pesquisar informações com base no id lá no banco
+
+Thii 15/11
+Criei login.js para validar informações
+Criei novo método em usuarioReposytory para buscar indormações com base no email
+Criei um GetMapping em IntegraçãoFrontDB para realizar a pesquisa com base no email
+Criei integraçãoCadastro e integraçãoLogin removendo o código de cadastro do IntegraçãoFrontBD
+Criei um aquivo service para login que serve para utilizar o Optional<> do UsuarioReposytory
+Em login.js ele valida de o usuario foi encontrado e se as senhas coensidem, caso sim ele salva os dados no aquivo Json e envia para a index
+Arquivo IntegraçãoFrontBD foi comentado pq estava causando interferencia com integraçãoLogin
+
+Thii 20/11
+Fiz um validador dos campos de nome e email para a aba cadastro e para isso eu fiz:
+1. criei @GetMapping("/Nome/{userName}") e @GetMapping("/Email/{email}") em integraçãoCadastro
+2. Mudei o nome de serviceLogin para serviceUsersLogin para abranger a tela de login e cadastro
+3. Criei um optional buscar por nome em serviceUsersLogin
+4. Criei um novo método em usuarioReposytory
+
+Thii 25/11
+Alterei o nome de ConexaoMySQL para ConexaoUsuarioMySQL
+Criei o arquivo ConexaoJogosMySQL.java para chamar as informações dos jogos
+Criei o arquivo Dockerfile para a inicialização do projeto no serivor (não funcionando)
+Mudei o apication.properties nos campos de user, url e password para pegar as variaveis do servidor
+
+Thii 29/11
+Criei o arquivo buscarJogos.js para capturar os valores do jogo chamando por id e armazenando em um let
+Mexi pacas pra colocar o progeto no render
+adicionei a dependencia do postgreSQL e removi a dependencia do MySQL
+
+Thii 30/11
+Modifiquei a variavel de url no render
+mudei os caminhos de localhost para apenas /cadastro ou /login
+Adicionei um buscador por id no integraçãoCadastro.java para o valores.js exibir
+criei a table usuarios no banco postgreSQL pelo pgAdmin4 
+alterei os COORS, n sei se ahudou em algo porem coloquei o url do site

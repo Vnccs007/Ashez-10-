@@ -4,17 +4,18 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Início - Ashez</title>
-        <link rel="icon" href="imgGeral/ashezSemFundo.png"/>
+        <link rel="icon" href="./imgGeral/ashezSemFundo.png"/>
         <link rel="stylesheet" href="css/global.css"/>
         <link rel="stylesheet" href="css/style.css"/>
+        <script src="js/valores.js" defer></script>
     </head>
     <body>
         <nav class="Navbar">
             <div class="container">
-                <a href="index.html"><img src="/imgGeral/logoAshez.png" alt="Ícone da Ashez" class="simbolo-ashez"></a>
+                <a href="index.html"><img src="./imgGeral/ashezSemFundo.png" alt="Ícone da Ashez" class="simbolo-ashez"></a>
                 <img src="imgGeral/lupa_pesquisa.png" alt="Símbolo da Barra de Pesquisa" class="lupa">
                 <form class="barra-pesquisa" role="search">
-                    <div id="resultados-pesquisa" class="resultados-pesquisa"></div>
+                    <div id="resultados-pesquisa"  class="resultados-pesquisa"></div>
                     <input class="barra-de-pesquisa" type="search" placeholder="Buscar por Jogos" aria-label="Search"/>
                     <button class="button-pesquisa" type="submit">Buscar</button>
                 </form>
@@ -23,13 +24,14 @@
                     <div id="usuarioDropdown" class="dropdown">
                             <div class="username">
                                 <button class="usuario-btn"></button> 
-                                <label class="names"> variavel Nome do user</label>
+                                <label class="names" id="User_Name"></label>
                             </div>
                         <a href="pages/config.html">Configurações</a>
-                        <a href="#">Amigos</a>
+                        <a href="./pages/friends.html">Amigos</a>
                         <a href="#">Meus Jogos</a>
-                        <a href="#">Lista de Desejos</a>
+                        <a href="">Lista de Desejos</a>
                         <a href="./pages/suporte.html">Suporte</a>
+                        <a href="./pages/login.html">Conectar</a>
                     </div>
                 </div>
             </div>
@@ -40,59 +42,104 @@
         </div>
         
         <!-- DESTAQUES -->
-        <div class="fundoCards">
+       <div class="fundoCards">
             <p class="titleSection"> Destaques </p> <br/>
             <div class="cards"> 
-                <div class="cardsHome" id="#" > <span class="boxPrice"> R$279,99 </span> <img src="./imgJogos/mk11.jpg" alt="Mortal Kombat 11" class="imgsCard">  </div>
-                <div class="cardsHome" id="#"> <span class="boxPrice"> R$299,90 </span> <img src="./imgJogos/fc26.jpg" alt="EA Sporte 26" class="imgsCard"></div>
-                <div class="cardsHome" id="cs2"> <span class="boxPricePromotion"> Grátis </span><img src="./imgJogos/cs2.jpg" alt="Counter Strick 2" class="imgsCard"> </div>
+                <div class="cardsHome" id="#" data-jogo=" Mortal Kombat " data-img="./imgJogos/mk11.jpg"   
+                    data-descricao="Mortal Kombat 11 é um dos jogos de luta mais populares da atualidade, 
+                    conhecido por sua jogabilidade intensa, gráficos detalhados e violência estilizada. O 
+                    game traz uma história cinematográfica que continua os eventos da saga, explorando viagem no 
+                    tempo e confrontos épicos entre personagens clássicos e suas versões alternativas. Além disso, 
+                    possui um elenco variado, modos competitivos online e o famoso sistema de Fatalities que tornou a 
+                    franquia mundialmente famosa." data-video="https://www.youtube.com/embed/UoTams2yc0s"> 
+                    <span class="boxPrice"> R$279,99 </span> 
+                    <img src="./imgJogos/mk11.jpg" alt="Mortal Kombat 11" class="imgsCard">  </div>
+
+                <div class="cardsHome" id="#" data-jogo=" Fifa "  data-img="./imgJogos/fc26.jpg"
+                    data-descricao="EA Sports FC 26 é a continuação da tradicional franquia de futebol da EA, oferecendo 
+                    partidas realistas, física aprimorada e diversos modos de jogo como Carreira, Volta e Ultimate Team. 
+                    Ele reproduz ligas, clubes e atletas de todo o mundo com fidelidade, trazendo melhorias na movimentação
+                    dos jogadores, estratégias mais dinâmicas e gráficos ainda mais imersivos. É ideal para quem gosta de 
+                    competir online ou simular a trajetória de um jogador ou treinador" data-video="https://www.youtube.com/embed/TSi0iJYSQ24"> 
+                    <span class="boxPrice"> R$299,90 </span> 
+                    <img src="./imgJogos/fc26.jpg" alt="EA Sporte 26" class="imgsCard"></div>
+
+                <div class="cardsHome" id="#" data-jogo="Counter Strike 2" data-img="./imgJogos/cs2.jpg"
+                 data-descricao="Counter-Strike 2 é a nova geração do clássico jogo de tiro tático da Valve.
+                  Ele mantém a essência competitiva do CS:GO, com partidas baseadas em estratégia, reflexos e cooperação 
+                  em equipe, mas atualizado com gráficos mais realistas, novas mecânicas de fumaça dinâmica e melhorias no
+                   desempenho." data-video="//www.youtube.com/embed/c80dVYcL69E"> 
+                   <span class="boxPricePromotion"> Grátis </span> 
+                   <img src="./imgJogos/cs2.jpg" alt="Counter Strick 2" class="imgsCard"> </div>
+
             </div> 
             <a class="verMais" href="pages/destaques.html"> Ver mais</a> <br/>
 
             <!-- PROMOCAO LIMITADA -->
             <p class="titleSection"> <b> Promoção Limitada </b> </p> <br/>
             <div class="cards"> 
-                <div class="cardsHome" id="#"> <span class="boxPricePromotion"> R$50,90 </span> <img src="./imgJogos/civilizationVI.jpg" alt="Civilization 6" class="imgsCard"></div>
-                <div class="cardsHome" id="#"> <span class="boxPricePromotion"> R$29,90 </span> <img src="./imgJogos/itTakesTwo.jpg" alt="it Takes Two" class="imgsCard"></div>
-                <div class="cardsHome" id="#"> <span class="boxPricePromotion"> R$74,90 </span> <img src="./imgJogos/readDead_ll.jpg" alt="Red Dead Redemption 2" class="imgsCard"></div>
+                <div class="cardsHome" id="#" data-jogo="Civilization VI" data-img="./imgJogos/civilizationVI.jpg" data-descricao="Em Civilization VI, o jogador assume o controle de uma civilização e deve guiá-la desde os tempos antigos até o futuro tecnológico. É um jogo de estratégia por turnos em que cada decisão — como onde construir cidades, quais tecnologias pesquisar e como interagir com outras nações — influencia o rumo da partida. Ele se destaca por sua profundidade, múltiplas condições de vitória (ciência, cultura, diplomacia, dominação) e alta rejogabilidade." data-video="https://www.youtube.com/embed/5KdE0p2joJw"> <span class="boxPricePromotion"> R$50,90 </span> <img src="./imgJogos/civilizationVI.jpg" alt="Civilization 6" class="imgsCard"></div>
+                <div class="cardsHome" id="#" data-jogo="It Takes Two" data-img="./imgJogos/itTakesTwo.jpg" data-descricao="It Takes Two é um jogo cooperativo focado na colaboração entre dois jogadores. A história acompanha um casal prestes a se separar que, após um evento mágico, se transforma em bonecos e precisa aprender a trabalhar junto para voltar ao normal. Cada fase apresenta mecânicas inéditas, criativas e divertidas, combinando plataformas, puzzles e ação. É amplamente elogiado por seu design inteligente e narrativa emocionante." data-video="https://www.youtube.com/embed/ohClxMmNLQQ"> <span class="boxPricePromotion" > R$29,90 </span> <img src="./imgJogos/itTakesTwo.jpg" alt="it Takes Two" class="imgsCard"></div>
+                <div class="cardsHome" id="#" data-jogo="Red Dead Redemption 2" data-img="./imgJogos/readDead_ll.jpg" data-descricao="Red Dead Redemption II é um dos jogos de mundo aberto mais aclamados da história. Ambientado no fim do Velho Oeste, o jogo segue Arthur Morgan, um fora-da-lei que luta entre a lealdade ao seu grupo e seus próprios valores. O mundo é extremamente detalhado, com fauna, clima e personagens muito realistas. Além da narrativa profunda, o gameplay oferece caça, cavalgar, tiroteios, exploração e dezenas de atividades secundárias que tornam a experiência rica e imersiva." data-video="https://www.youtube.com/embed/gmA6MrX81z4"> <span class="boxPricePromotion"> R$74,90 </span> <img src="./imgJogos/readDead_ll.jpg" alt="Red Dead Redemption 2" class="imgsCard"></div>
             </div>
-            <a class="verMais" href="pages/destaques.html"> Ver mais</a> <br/>
+            <a class="verMais" href="pages/promocao.html"> Ver mais</a> <br/>
 
             <!-- MAIS VENDIDOS -->
             <p class="titleSection"> <b> Mais Vendidos </b> </p> <br/>
             <div class="cards"> 
-                <div class="cardsHome" id="#"> <span class="boxPricePromotion"> R$74,90 </span> <img src="./imgJogos/gtaV.jpeg" alt="gtaV" class="imgsCard"> </div>
-                <div class="cardsHome" id="#"> <span class="boxPrice"> R$84,90 </span> <img src="./imgJogos/batmanArkhanKnight.png" alt="batmanArkhanKnight" class="imgsCard"> </div>
-                <div class="cardsHome" id="#"> <span class="boxPricePromotion"> R$39,50 </span> <img src="./imgJogos/detroidBecome.jpg" alt="detroidBecome" class="imgsCard"></div>
+                <div class="cardsHome" id="#" data-jogo="GTA V" data-img="./imgJogos/gtaV.jpeg" data-descricao="Grand Theft Auto V é um dos jogos mais populares e marcantes da história dos videogames. Ele se passa na cidade de Los Santos, um vasto mundo aberto inspirado em Los Angeles, onde o jogador acompanha a vida de três protagonistas: Michael, um ex-ladrão tentando viver em paz; Franklin, um jovem que deseja subir na vida; e Trevor, um criminoso imprevisível e explosivo.
+                  A versão Enhanced traz melhorias gráficas, mais detalhes no mundo, novos efeitos de iluminação, e suporte a maior resolução e desempenho. Além da campanha, o jogo também inclui GTA Online, um modo multiplayer gigantesco com missões, empresas, assaltos, veículos e atualizações constantes." data-video="https://www.youtube.com/embed/QkkoHAzjnUs"> <span class="boxPricePromotion"> R$74,90 </span> <img src="./imgJogos/gtaV.jpeg" alt="gtaV" class="imgsCard"> </div>
+                <div class="cardsHome" id="#" data-jogo="Batman Arkham Knight" data-img="./imgJogos/batmanArkhanKnight.png" data-descricao="Batman: Arkham Knight é a conclusão épica da aclamada série Arkham. Neste game, o jogador assume o papel do Batman em sua versão mais poderosa, enfrentando o Espantalho e uma nova ameaça misteriosa: o Cavaleiro de Arkham.
+                  O jogo se destaca por seu combate fluido, mecânicas de furtividade, exploração de Gotham em mundo aberto e o uso do Batmóvel pela primeira vez na série. A Premium Edition inclui todos os conteúdos adicionais (DLCs), como missões extras, trajes especiais, histórias paralelas e novas skins para o Batmóvel. É considerado um dos melhores jogos de super-herói já criados." data-video="https://www.youtube.com/embed/wsf78BS9VE0"> <span class="boxPrice"> R$84,90 </span> <img src="./imgJogos/batmanArkhanKnight.png" alt="batmanArkhanKnight" class="imgsCard"> </div>
+                <div class="cardsHome" id="#" data-jogo="Detroit Become Human" data-img="./imgJogos/detroidBecome.jpg" data-descricao="Detroit: Become Human é uma narrativa interativa que explora temas profundos como inteligência artificial, liberdade, escolhas e humanidade. Situado em um futuro próximo, o jogo acompanha três androides — Connor, Kara e Markus — cada um vivendo dilemas próprios enquanto o mundo debate os direitos e emoções das máquinas.
+                    O jogador toma decisões que moldam completamente a história, podendo levar a dezenas de finais diferentes. A trama é intensa, emocional e repleta de momentos de tensão, abordando questões sociais, preconceito e revolução. É ideal para quem gosta de jogos focados em narrativa e escolhas que realmente importam." data-video="https://www.youtube.com/embed/8a-EObAhYrg" > <span class="boxPricePromotion"> R$39,50 </span> <img src="./imgJogos/detroidBecome.jpg" alt="detroidBecome" class="imgsCard"></div>
             </div>
-            <a class="verMais" href="pages/vendidos.html"> Ver mais</a> <br/>
+            <a class="verMais" href="./pages/vendidos.html"> Ver mais</a> <br/>
         </div> 
 
-        <!-- MODAL -->
-        <dialog id="dialog">
-           <div class="modal">
-            <span id="fecharModal"> X </span>
-            <img src="./imgJogos/cs2.jpg" class="imgModal" alt="cs2">
-           </div>
+        <!-- MODAL DO JOGO -->
+        <dialog> 
+            <div class="fundoDescModal">
+                <img id="imgJogoModal">
+                <span id="descricaoJogoModal"> </span> <br/> <Br/>
+                <p class="analises"> ANÁLISES RECENTES: <span class="mista"> Mistas   (3.002)</span></p> <br/>
+                <p class="analises"> ANÁLISES DO JOGO EM PT-BR: <span class="boas"> Boas  (1.452) </span> </p><br/><br/>
+                <p class="analises"> DATA DE LANÇAMENTO: 24/07/2003 </p>
+                <p class="analises"> DISTRIBUIDORA: <span class="boas">AshezINC</span> </p> <br/>
+                <div class="botoesModal">
+                    <button class="ListaDesejoBtn"> 🛒 </button>
+                    <button class="comprarBtn"><a href="pages/pagamento.html">Comprar </a></button>
+                </div>    
+            </div>
+            <span id="nomeJogoModal"> </span>
+            <iframe id="videoModal" width="62%" height="55%" frameborder="0"></iframe>
+            <span id="fecharModal">X</span>
         </dialog>
 
+
         <script>
-            var modal_open = document.querySelector('#cs2');
-            var cancel =document.querySelector('#fecharModal')
+             const meuModal = document.querySelector('dialog');
+             const nomeJogo = document.querySelector('#nomeJogoModal');
+             const imgJogo = document.querySelector('#imgJogoModal');
+             const descricaoJogo = document.querySelector('#descricaoJogoModal');
+             const video = document.querySelector('#videoModal');
+             var cancel = document.querySelector('#fecharModal');
 
-            modal_open.addEventListener('click', () => {
-                dialog.showModal();
-
-                requestAnimationFrame(() => {
-                 dialog.classList.add("open");
-               });
+            document.querySelectorAll('.cardsHome').forEach(jogo => {
+                 jogo.addEventListener('click', () => {
+                    nomeJogo.textContent = jogo.dataset.jogo;
+                    imgJogo.src = jogo.dataset.img;
+                    video.src = jogo.dataset.video;
+                    descricaoJogo.textContent = jogo.dataset.descricao;
+                    meuModal.showModal();
+                });
             });
-
             cancel.addEventListener("click", () => {
-                dialog.close();
-            
+                meuModal.close();
             });
-        </script>  
+        </script>
+
+
              <section class="generos">
             <p class="titleSection"><b>Explore por Gênero</b></p>
             <div class="generosContainer">
@@ -133,19 +180,23 @@
                     <a href="../index.html">Reembolsos</a>
                 </div>
                 <div class="icones">
-                    <a href="https://x.com/"><img src="/imgGeral/twitter-x (1).svg" alt=""></a>
-                    <a href="https://www.instagram.com/Ashez"><img src="/imgGeral/instagram (1).svg" alt=""></a>
-                    <a href="#"><img src="/imgGeral/envelope.svg" alt=""></a>
+                    <a href="https://x.com/"><img src="./imgGeral/twitter-x (1).svg" alt=""></a>
+                    <a href="https://www.instagram.com/"><img src="./imgGeral/instagram (1).svg" alt=""></a>
+                    <a href="#"><img src="./imgGeral/envelope.svg" alt=""></a>
                 </div>
         </footer>
         <div class="jogosTudo">
-            <div class="jogo">
+            <div class="jogo" data-video="https://www.youtube.com/embed/UoTams2yc0s" data-descricao="">
                 <img src="./imgJogos/mk11.jpg" alt="Mortal Kombat 11" class="imgsCard">
+
             </div>
-            <div class="jogo">
+            <div class="jogo" data-video="https://www.youtube.com/embed/TSi0iJYSQ24" data-descricao="">
                 <img src="./imgJogos/fc26.jpg" alt="EA Sports FC 26" class="imgsCard">
             </div>
-            <div class="jogo">
+            <div class="jogo"  data-descricao="Counter-Strike 2 é a nova geração do clássico jogo de tiro tático da Valve.
+                  Ele mantém a essência competitiva do CS:GO, com partidas baseadas em estratégia, reflexos e cooperação 
+                  em equipe, mas atualizado com gráficos mais realistas, novas mecânicas de fumaça dinâmica e melhorias no
+                   desempenho." data-video="//www.youtube.com/embed/c80dVYcL69E"> >
                 <img src="./imgJogos/cs2.jpg" alt="Counter Strike 2" class="imgsCard">
             </div>
             <div class="jogo">
@@ -167,35 +218,108 @@
                 <img src="./imgJogos/detroidBecome.jpg" alt="Detroit Become Human" class="imgsCard">
             </div>
             <div class="jogo">
-                <img src="../imgJogos/TheLastOfUs_ll.jpg" alt="The Last Of Us Part II" class="imgsCard">
-            </div>
-
-            <div class="jogo">
-                <img src="../imgJogos/f1.jpg" alt="Fórmula 1" class="imgsCard">
+                <img src="./imgJogos/TheLastOfUs_ll.jpg" alt="The Last Of Us Part II" class="imgsCard">
             </div>
             <div class="jogo">
-                <img src="../imgJogos/marvelRivals.jpg" alt="Marvel Rivals" class="imgsCard">
+                <img src="./imgJogos/f1.jpg" alt="Fórmula 1" class="imgsCard">
             </div>
             <div class="jogo">
-                <img src="../imgJogos/readyOrNot.jpg" alt="Ready or Not" class="imgsCard">
+                <img src="./imgJogos/marvelRivals.jpg" alt="Marvel Rivals" class="imgsCard">
             </div>
             <div class="jogo">
-                <img src="../imgJogos/peak.jpg" alt="Peak" class="imgsCard">
+                <img src="./imgJogos/readyOrNot.jpg" alt="Ready or Not" class="imgsCard">
             </div>
             <div class="jogo">
-                <img src="../imgJogos/rocketLeague.jpg" alt="Rocket League" class="imgsCard">
+                <img src="./imgJogos/peak.jpg" alt="Peak" class="imgsCard">
             </div>
             <div class="jogo">
-                <img src="../imgJogos/sifu.jpg" alt="Sifu" class="imgsCard">
+                <img src="./imgJogos/rocketLeague.jpg" alt="Rocket League" class="imgsCard">
             </div>
             <div class="jogo">
-                <img src="../imgJogos/godOfWar.jpeg" alt="God of War" class="imgsCard">
+                <img src="./imgJogos/sifu.jpg" alt="Sifu" class="imgsCard">
             </div>
             <div class="jogo">
-                <img src="../imgJogos/forzaHorizonIV.jpg" alt="Forza Horizon IV" class="imgsCard">
+                <img src="./imgJogos/godOfWar.jpeg" alt="God of War" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/forzaHorizonIV.jpg" alt="Forza Horizon IV" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/jedi_fallenorder.jpg" alt="Jedi Fallen Order" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/fifa18.jpg" alt="Fifa 18" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/dark_souls3.jpg" alt="Dark Souls 3" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/cyberpunk.jpg" alt="Cyberpunk  2077" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/bo2.jpg" alt="Call Of Duty Black Ops 2" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/stardew_valley.jpg" alt="Stardew Valley" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/farcry4.jpg" alt="Farcry 4" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/tekken8.jpg" alt="Tekken 8" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/silksong.jpg" alt="Silksong" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/overcooked2.jpg" alt="Overcooked 2" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/metalSlug.jpg" alt="Metal Slug" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/splitfiction.jpg" alt="Split Fiction" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/NFSMostWanted.jpg" alt="Need for Speed: Most Wanted" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/persona3.jpg" alt="Persona 3" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/amongUs.webp" alt="Amoung Us" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/farcry6.jpg" alt="Farcry 6" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/legoBatman3.jpg" alt="Lego Batman 3" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/nba2k26.jpg" alt="NBA 2K26" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/black.jpeg" alt="Black" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/blackMythWukong.jpg" alt="Black Myth Wukong" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/ARC_Raiders.png" alt="ARC Raiders" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/diablo.jpg" alt="Diablo IV" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/assasins_shadows.jpg" alt="Assassin's Shadows" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/cosmic_invasion.jpg" alt="Marvel Cosmic Invasion" class="imgsCard">
+            </div>
+            <div class="jogo">
+                <img src="./imgJogos/hogwarts.jpg" alt="Hogwarts Legacy" class="imgsCard">
             </div>
         </div>
-
         <script src="js/script.js"></script>
         <script src="js/main.js"></script>
     </body>

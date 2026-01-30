@@ -17,7 +17,7 @@ const track = document.getElementById('carousel-track');
 
 // Caminhos ou URLs das imagens
 const slidesContent = [
-  '/imgJogos/mk11.jpg',
+  'imgJogos/mk11.jpg',
   'imgJogos/codMWll.jpg',
   'imgJogos/ghostTsushima.jpg',
   'imgJogos/legoBatman.jpg',
@@ -162,20 +162,22 @@ window.addEventListener('load', updateButtons);
 // E também se a tela for redimensionada
 window.addEventListener('resize', updateButtons);
 
+
+
 // BARRA DE PESQUISA
 
-async function carregarJogos() {
-    const response = await fetch("adminJogos.html"); 
-    const html = await response.text();
+// async function carregarJogos() {
+//     const response = await fetch("adminJogos.html"); 
+//     const html = await response.text();
 
-    // 2. Insere o HTML dentro da página principal
-    document.getElementById("listaJogos").innerHTML = html;
+//     // 2. Insere o HTML dentro da página principal
+//     document.getElementById("listaJogos").innerHTML = html;
 
-    // 3. Depois que carregar, ativar o filtro
-    ativarFiltro();
-}
+//     // 3. Depois que carregar, ativar o filtro
+//     ativarFiltro();
+// }
 
-carregarJogos();
+// carregarJogos();
 
 
 const inputPesquisa = document.querySelector('.barra-de-pesquisa');
@@ -193,6 +195,14 @@ inputPesquisa.addEventListener('input', function () {
     filtrarJogos(termo);
 });
 
+function abrirModal(elemento) {
+    nomeJogo.textContent = elemento.dataset.jogo;
+    imgJogo.src = elemento.dataset.img;
+    video.src = elemento.dataset.video;
+    descricaoJogo.textContent = elemento.dataset.descricao;
+    meuModal.showModal();
+}
+
 function filtrarJogos(termo) {
     const jogos = document.querySelectorAll('.jogo');
     let resultados = "";
@@ -201,9 +211,13 @@ function filtrarJogos(termo) {
         const img = jogo.querySelector('img');
         const altTexto = img ? img.alt.toLowerCase() : "";
 
-        if (altTexto.includes(termo)) {
+        if (altTexto.includes(termo.toLowerCase())) {
             resultados += `
-                <div class="resultado-item">
+                <div class="resultado-item" 
+                     data-jogo="${img.alt}" 
+                     data-img="${img.src}" 
+                     data-video="${jogo.dataset.video}" 
+                     data-descricao="${jogo.dataset.descricao}">
                     <img src="${img.src}" alt="${img.alt}">
                     <span>${img.alt}</span>
                 </div>
@@ -217,13 +231,12 @@ function filtrarJogos(termo) {
     } else {
         boxResultados.style.display = 'block';
         boxResultados.innerHTML = resultados;
+
+        // Adiciona event listener nos resultados
+        document.querySelectorAll('.resultado-item').forEach(item => {
+            item.addEventListener('click', () => {
+                abrirModal(item);
+            });
+        });
     }
 }
-
-    if (resultados === "") {
-        boxResultados.style.display = 'none';
-        boxResultados.innerHTML = "";
-    } else {
-        boxResultados.style.display = 'block';
-        boxResultados.innerHTML = resultados;
-    }

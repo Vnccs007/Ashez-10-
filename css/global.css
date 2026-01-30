@@ -108,9 +108,8 @@ body{
 
 .resultado-item {
     display: flex;
-    
     align-items: center;
-    padding: 8px; 
+    padding: 8px;
     gap: 40px;
     cursor: pointer;
     transition: 0.5s ease-in-out;
@@ -123,7 +122,7 @@ body{
 }
 
 .resultado-item img {
-    width: 45%;
+    width: 35%;
     height: auto;
     border-radius: 6px;
 }
@@ -174,11 +173,11 @@ body{
   margin: 5px;
   border-radius: 5px;
   text-align: center;
-  transition: 1s;
+  transition: 0.3s;
 }
 
 .dropdown a:hover {
-   background: linear-gradient(to right, #720d0d, #b30000); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-color: #b30000;
 }
 
 .show {
@@ -221,6 +220,10 @@ footer a:hover {
     transition: filter 0.3s ease;
     filter: invert(75%) sepia(20%) saturate(500%) hue-rotate(180deg) brightness(90%) contrast(85%);
 }
+
+
+
+
 /*AJUSTANDO TUDO PARA MOBILE*/
 
 @media(max-width: 678px){

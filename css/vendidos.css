@@ -11,8 +11,19 @@
 /* cards de após o carousel */
 .cards{
   display: flex;
+  
 }
-
+.boxPrice{
+  background-color: #363434;
+  text-align: right;
+  position: absolute;
+  padding: 14px;
+  text-align: right;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+  margin-left: 1vw;
+  z-index: 10;
+}
 .boxPricePromotion{
   position: absolute;
   background-color: #5bc251;;
@@ -23,7 +34,7 @@
   margin-left: 1vw;
   z-index: 10;
 }
-.cardPromocao{
+.cardVendidos{
   position: relative;
   justify-content: flex-start;
   color: white;
@@ -51,43 +62,7 @@
     filter: brightness(1.05);
 }
 
-.footer-conteudo{
-    display: flex;
-    align-items: center; 
-    text-align: center;
-    gap: 8px;
-}
-footer {
-  background-color: rgba(29, 26, 26, 0.1); 
-  color: #ccc;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; 
-  text-align: center;
-  padding: 15px 0;
-  font-family: Arial, sans-serif;
-  gap: 10px;
-}
-footer a {
-  text-decoration: none; /* sem sublinhado */
-  color: #ccc;           /* cor dos links */
-  margin: 0 5px;
-}
 
-footer a:hover {
-  color: #fff; /* muda de cor qunado passa o mouse */
-}
-.simbolo-footer{
-      height: 5vh;
-}
-.icones img{
-    width: 25px;
-    height: 25px;
-    margin: 0 5px;
-    transition: filter 0.3s ease;
-    filter: invert(75%) sepia(20%) saturate(500%) hue-rotate(180deg) brightness(90%) contrast(85%);
-}
 
 @media(max-width: 780px){
   /* navbar mobile */

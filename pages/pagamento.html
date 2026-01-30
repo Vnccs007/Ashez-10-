@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Fazer Login na Ashez </title>
+        <link rel="icon" href="../imgGeral/ashezSemFundo.png"/>
+        <link rel="stylesheet" href="../css/login.css"/>
+        <script src="../js/login.js" defer></script>
+    </head>
+    <body>
+        <div class="containerTelaPrincipal">
+            <div class="telaCadastro"> <br/> 
+            <!-- colocar container -->
+                <div class="containerLogoNome">
+                    <img class="logo" src="../imgGeral/logoAshez.png">
+                    <div class="marca"> Ashez </div>
+                </div>
+                <div class="telaBotao">
+                    <label class="tituloLogin">Login</label><br/><br/>
+                   <form id="payment-form">
+                        <input type="text" id="nome" placeholder="Nome Completo" required>
+                        <div id="card-element"><!-- Stripe insere o formulário do cartão aqui --></div>
+                        <button type="submit">Pagar</button>
+                        <div id="card-errors" role="alert"></div>
+                   </form>
+                   <script>
+                    const stripe = Stripe('pk_test_51SaWCwAPWlMCBWpHknXswDA1sVJ2dr09EkJMftOn4IHUn0xkdkOwGsw1yAvqP9G4FX0PEnL8Y9S9IDgh4RDB0zg300iVFYTw38pk_test_51SaWCwAPWlMCBWpHknXswDA1sVJ2dr09EkJMftOn4IHUn0xkdkOwGsw1yAvqP9G4FX0PEnL8Y9S9IDgh4RDB0zg300iVFYTw38'); // sua chave pública da Stripe
+                    const elements = stripe.elements();
+                    const card = elements.create('card');
+                    card.mount('#card-element');
+
+                    const form = document.getElementById('payment-form');
+
+                    form.addEventListener('submit', async (event) => {
+                    event.preventDefault();
+                    const {token, error} = await stripe.createToken(card);
+
+                    if (error) {
+                        document.getElementById('card-errors').textContent = error.message;
+                    } else {
+                        // Envie o token para seu backend para processar o pagamento
+                        console.log('Token recebido:', token.id);
+                    }
+                    });
+
+                   </script>
+                    <div class="linkCadastro"> 
+                        <p class="naoTemConta">Não tem uma conta? </p> <a href="cadastro.html" class="criarConta"> Criar conta</a>
+                    </div>
+                </div> <br/>
+            <!-- botão entrar -->
+            <div class="containerCadastro">
+                 <a> <button type="submit" name="entrar" class="entrar" onclick="validar()">  Entrar  </button> </a>
+            </div>
+         </div>
+        </div>
+    </body>
+</html>

@@ -7,6 +7,7 @@
         <link rel="icon" href="../imgGeral/ashezSemFundo.png"/>
         <link rel="stylesheet" href="../css/global.css"/>
         <link rel="stylesheet" href="../css/destaque.css"/>
+        <script src="../js/valores.js" defer></script>
     </head>
     <body>
         <nav class="Navbar">
@@ -22,13 +23,13 @@
                     <div id="usuarioDropdown" class="dropdown">
                             <div class="username">
                                 <button class="usuario-btn"></button> 
-                                <label class="names"> variavel Nome do user</label>
+                                <label class="names" id="User_Name"></label>
                             </div>
                         <a href="config.html">Configurações</a>
                         <a href="#">Amigos</a>
                         <a href="#"> Meus Jogos</a>
                         <a href="#">Lista de Desejos</a>
-                        <a href="#">Suporte</a>
+                        <a href="./suporte.html">Suporte</a>
                     </div>
                 </div>
             </div>
@@ -78,6 +79,49 @@
                 </div>
             </div>
 
+                   <dialog> 
+            <div class="fundoDescModal">
+                <img id="imgJogoModal">
+                <span id="descricaoJogoModal"> </span> <br/> <Br/>
+                <p class="analises"> ANÁLISES RECENTES: <span class="mista"> Mistas   (3.002)</span></p> <br/>
+                <p class="analises"> ANÁLISES DO JOGO EM PT-BR: <span class="boas"> Boas  (1.452) </span> </p><br/><br/>
+                <p class="analises"> DATA DE LANÇAMENTO: 24/07/2003 </p>
+                <p class="analises"> DISTRIBUIDORA: <span class="boas">AshezINC</span> </p> <br/>
+                <div class="botoesModal">
+                    <button class="ListaDesejoBtn"> 🛒 </button>
+                    <button class="comprarBtn"><a href="pages/pagamento.html">Comprar </a></button>
+                </div>    
+            </div>
+            <span id="nomeJogoModal"> </span>
+            <iframe id="videoModal" width="62%" height="55%" frameborder="0"></iframe>
+            <span id="fecharModal">X</span>
+        </dialog>
+
+
+        <script>
+             const meuModal = document.querySelector('dialog');
+             const nomeJogo = document.querySelector('#nomeJogoModal');
+             const imgJogo = document.querySelector('#imgJogoModal');
+             const descricaoJogo = document.querySelector('#descricaoJogoModal');
+             const video = document.querySelector('#videoModal');
+             var cancel = document.querySelector('#fecharModal');
+
+            document.querySelectorAll('.cardDestaque').forEach(jogo => {
+                 jogo.addEventListener('click', () => {
+                    nomeJogo.textContent = jogo.dataset.jogo;
+                    imgJogo.src = jogo.dataset.img;
+                    video.src = jogo.dataset.video;
+                    descricaoJogo.textContent = jogo.dataset.descricao;
+                    meuModal.showModal();
+                });
+            });
+            cancel.addEventListener("click", () => {
+                meuModal.close();
+            });
+        </script>
+
+
+
               <footer>
                 <div class="footer-conteudo">
                     <img src="imgGeral/ashezSemFundo.png" alt="" class="simbolo-footer">
@@ -89,9 +133,9 @@
                     <a href="../index.html">Reembolsos</a>
                 </div>
                 <div class="icones">
-                    <a href="https://x.com/"><img src="/imgGeral/twitter-x (1).svg" alt=""></a>
-                    <a href="https://www.instagram.com/"><img src="/imgGeral/instagram (1).svg" alt=""></a>
-                    <a href="#"><img src="/imgGeral/envelope.svg" alt=""></a>
+                    <a href="https://x.com/"><img src="../imgGeral/twitter-x (1).svg" alt=""></a>
+                    <a href="https://www.instagram.com/"><img src="../imgGeral/instagram (1).svg" alt=""></a>
+                    <a href="#"><img src="../imgGeral/envelope.svg" alt=""></a>
                 </div>
         </footer>
               

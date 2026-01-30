@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>Amigos | Ashez</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/friends.css" />
+</head>
+<body>
+  <div class="page-container">
+    <header class="site-header">
+
+      <!-- ANCORAR IMG PARA HOME (ÚNICA ALTERAÇÃO) -->
+      <a href="../index.html" class="logo-img">
+        <img src="../imgGeral/ashezSemFundo.png" alt="Ashez" />
+      </a>
+
+      <div class="logo">Ashez</div>
+
+      <nav>
+        <a href="../index.html">Início</a>
+        <a href="/friends.html" class="active">Amigos</a>
+        <a href="../pages/config.html">Perfil</a>
+      </nav>
+    </header>
+
+    <main class="friends-page">
+      <section class="friends-layout">
+        <!-- LADO ESQUERDO: busca + listas -->
+        <aside class="friends-sidebar">
+          <h1 class="friends-title">Amigos</h1>
+          <p class="friends-sub">Encontre pessoas, veja quem está online e organize suas conexões.</p>
+
+          <div class="friends-search">
+            <label for="searchInput">Buscar usuário</label>
+            <input id="searchInput" type="text" placeholder="Digite um nome..." />
+          </div>
+
+          <div class="friends-section-label">Resultados da busca</div>
+          <ul class="friends-list" id="searchList"></ul>
+
+          <div class="friends-section-label" style="margin-top:12px;">Seus amigos</div>
+          <ul class="friends-list" id="friendsList"></ul>
+        </aside>
+
+        <!-- LADO DIREITO: detalhes do amigo selecionado -->
+        <section class="friends-main-card">
+          <div class="friends-main-header">
+            <div>
+              <h2 id="selectedName">Nenhum amigo selecionado</h2>
+              <span id="selectedStatus">Escolha alguém na lista para ver detalhes.</span>
+            </div>
+            <span class="friends-tag" id="selectedTag">Offline</span>
+          </div>
+
+          <div class="friends-chat-preview" id="selectedPreview">
+            Nenhuma conversa recente disponível.
+          </div>
+
+          <div class="friends-actions">
+            <button class="btn btn-primary" id="btnOpenChat" disabled>Enviar mensagem</button>
+            <button class="btn btn-secondary" id="btnRemove" disabled>Remover amigo</button>
+          </div>
+
+          <div class="friends-empty" id="friendsEmptyText">
+            Você ainda não adicionou amigos nesta demo. Use a busca à esquerda e clique em “Adicionar” para simular.
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      © 2025 Ashez. Todos os direitos reservados.
+    </footer>
+  </div>
+
+  <script src="/friends.js"></script>
+</body>
+</html>

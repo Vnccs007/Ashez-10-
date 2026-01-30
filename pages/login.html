@@ -6,6 +6,7 @@
         <title> Fazer Login na Ashez </title>
         <link rel="icon" href="../imgGeral/ashezSemFundo.png"/>
         <link rel="stylesheet" href="../css/login.css"/>
+        <script src="../js/login.js" defer></script>
     </head>
     <body>
         <div class="containerTelaPrincipal">
@@ -17,13 +18,13 @@
                 </div>
                 <div class="telaBotao">
                     <label class="tituloLogin">Login</label><br/><br/>
-                    <form class="formulario" action="/cadastro" method="POST">
+                    <form class="formulario" action="/Login" method="GET">
                 
                         <label>Email:</label> <br/><br/>
-                        <input class="emailbar" type="email" name="email" required> <br/><br/>
+                        <input class="emailbar" type="email" name="loginEmail" id="loginEmail" required> <br/><br/>
 
                         <label>Senha:</label> <br/><br/>
-                        <input class="senhabar" type="password" name="senha" required> <br/><br/>
+                        <input class="senhabar" type="password" name="loginSenha" id="loginSenha" required> <br/><br/>
 
                     </form>
                     <div class="linkCadastro"> 
@@ -32,7 +33,7 @@
                 </div> <br/>
             <!-- botão entrar -->
             <div class="containerCadastro">
-                 <a href="../index.html"> <button type="submit" name="entrar" class="entrar">  Entrar  </button> <a/>
+                 <a> <button type="submit" name="entrar" class="entrar" onclick="validar()">  Entrar  </button> </a>
             </div>
          </div>
         </div>
