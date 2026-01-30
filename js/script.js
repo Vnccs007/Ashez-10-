@@ -53,7 +53,40 @@ track.appendChild(firstClone);
 
 // Atualizar lista de slides com clones incluídos
 const allSlides = Array.from(track.children);
+function atualizarSlidesEspecificos() {
+  const largura = window.innerWidth;
 
+  allSlides.forEach((slide, index) => {
+
+    // ⛔ ignora clones
+    if (index === 0 || index === allSlides.length - 1) return;
+
+    const img = slide.querySelector('img');
+    if (!img) return;
+
+    const indiceReal = index - 1; // slide real (sem clone)
+
+    
+     if (indiceReal === 0) {
+      img.src = largura > 480
+        ? 'imgJogos/mk11.jpg'
+        : 'imgJogos/mk11Mobile.jpg';
+    }
+
+    if (indiceReal === 4) {
+      img.src = largura > 480
+        ? 'imgJogos/readDead_ll.jpg'
+        : 'imgJogos/redDeadIIMobile.jpg';
+    }
+
+    // 🔵 FORZA (posição 5 do array original)
+    if (indiceReal === 5) {
+      img.src = largura > 480
+        ? 'imgJogos/forzaHorizonIV.jpg'
+        : 'imgJogos/forzaHorizonMobile.png';
+    }
+  });
+}
 // Index inicial - o primeiro slide original está na posição 1 (por causa do lastClone na posição 0)
 let currentIndex = 1;
 
@@ -108,11 +141,15 @@ setInterval(goToNextSlide, 3000);
 
 window.addEventListener('load', () => {
   updateCarousel();
+  atualizarSlidesEspecificos();
 });
 
 window.addEventListener('resize', () => {
   updateCarousel();
+  atualizarSlidesEspecificos();
 });
+
+
 const scrollContainer = document.querySelector('.generosScroll');
 const btnLeft = document.querySelector('.scroll-btn.left');
 const btnRight = document.querySelector('.scroll-btn.right');
