@@ -232,6 +232,7 @@ footer a:hover {
     min-width: 95%;
     margin-left: 1vw;
     padding: 2px;
+    width: 10px;
   }
   .usuario-btn{
     margin-left: 100%;
