@@ -226,10 +226,10 @@ footer a:hover {
 
 /*AJUSTANDO TUDO PARA MOBILE*/
 
-@media(max-width: 480px){
+@media(max-width: 490px){
   /* navbar mobile */
   .Navbar{          
-    max-width: 95%;
+    min-width: 95%;
     margin-left: 1vw;
     padding: 2px;
   }
